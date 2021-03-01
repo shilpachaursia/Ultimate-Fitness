@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/gender"
+        android:layout_marginTop="30dp"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="CHOOSE YOUR GENDER"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:textSize="24dp"
+        android:gravity="center_vertical|center_horizontal"/>
+
+    <ImageView
+        android:id="@+id/boy"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_below="@id/gender"
+        android:layout_marginLeft="100dp"
+        android:layout_marginTop="-1dp"
+        app:srcCompat="@drawable/boy" />
+
+    <TextView
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:text="MALE"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:textSize="24dp"
+       android:layout_below="@id/boy"
+        android:layout_marginLeft="150dp"
+        android:id="@+id/boytext"
+        android:layout_marginTop="20dp"/>
+
+    <ImageView
+        android:id="@+id/girl"
+        android:layout_width="221dp"
+        android:layout_height="233dp"
+        android:layout_below="@id/boytext"
+        android:layout_marginLeft="100dp"
+        android:layout_marginTop="0dp"
+        app:srcCompat="@drawable/girl" />
+
+    <TextView
+        android:id="@+id/girltext"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_below="@id/girl"
+        android:layout_marginLeft="150dp"
+        android:layout_marginTop="3dp"
+        android:text="FEMALE"
+        android:textColor="@color/black"
+        android:textSize="24dp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:text="ULITIMATE FITNESS"
+        android:textColor="@color/black"
+        android:gravity="center"
+        android:textSize="14sp"
+        android:textStyle="bold" />
+
+
+</RelativeLayout>

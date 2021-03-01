@@ -1,0 +1,651 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".female.exerciseFemale.AbsWorkout">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="52dp">
+
+        <ImageView
+            android:id="@+id/abs_bact_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:padding="15dp"
+            android:src="@drawable/back_btn" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/adamina"
+            android:text="Abs Exercise"
+            android:textSize="30sp"
+            android:textColor="@color/black"
+            android:layout_marginLeft="50dp"/>
+
+        <ImageView
+            android:id="@+id/search_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:padding="15dp"
+            android:src="@drawable/search" />
+
+    </RelativeLayout>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="55dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/girls_round_corner">
+
+                <TextView
+                    android:id="@+id/ex_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="20sp"
+                    android:fontFamily="@font/arima_madurai_medium"
+                    android:text="ABS WORKOUT "
+                    android:textSize="25sp"
+                    android:textColor="@color/dark_blue"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/arima_madurai_medium"
+                    android:padding="20sp"
+                    android:text="30 MINUTES "
+                    android:textColor="@color/dark_blue"
+                    android:textSize="15sp"
+                    android:layout_alignParentBottom="true"/>
+
+                <pl.droidsonroids.gif.GifImageView
+                    android:id="@+id/ex_img"
+                    android:layout_width="200dp"
+                    android:layout_height="150dp"
+                    android:src="@drawable/girlspashbg"
+                    android:layout_alignParentRight="true"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="130dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="20sp"
+                    android:fontFamily="@font/arima_madurai_medium"
+                    android:text=" CROSS JUMPING JACK"
+                    android:textSize="25sp"
+                    android:textColor="@color/dark_blue"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/arima_madurai_medium"
+                    android:padding="20sp"
+                    android:text="30 Seconds "
+                    android:textColor="@color/dark_blue"
+                    android:textSize="15sp"
+                    android:layout_alignParentBottom="true"/>
+
+                <pl.droidsonroids.gif.GifImageView
+                    android:layout_width="200dp"
+                    android:layout_height="150dp"
+                    android:src="@drawable/cross_jumpingjack"
+                    android:layout_alignParentRight="true"
+                    />
+
+            </RelativeLayout>
+            <View
+                android:layout_width="340dp"
+                android:layout_height="2dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="2dp"
+                android:background="@color/black" />
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="130dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="20sp"
+                    android:fontFamily="@font/arima_madurai_medium"
+                    android:text="HIGH STEPPING"
+                    android:textSize="25sp"
+                    android:textColor="@color/dark_blue"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/arima_madurai_medium"
+                    android:padding="20sp"
+                    android:text="30 Seconds "
+                    android:textColor="@color/dark_blue"
+                    android:textSize="15sp"
+                    android:layout_alignParentBottom="true"/>
+
+                <pl.droidsonroids.gif.GifImageView
+                    android:layout_width="200dp"
+                    android:layout_height="150dp"
+                    android:src="@drawable/highstepping"
+                    android:layout_alignParentRight="true"/>
+
+            </RelativeLayout>
+            <View
+                android:layout_width="340dp"
+                android:layout_height="2dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="2dp"
+                android:background="@color/black" />
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="130dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="20sp"
+                    android:fontFamily="@font/arima_madurai_medium"
+                    android:text="STANDING BICYCLE CRUNCHES "
+                    android:textSize="15sp"
+                    android:textColor="@color/dark_blue"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/arima_madurai_medium"
+                    android:padding="20sp"
+                    android:text="X 12 "
+                    android:textColor="@color/dark_blue"
+                    android:textSize="15sp"
+                    android:layout_alignParentBottom="true"/>
+
+                <pl.droidsonroids.gif.GifImageView
+                    android:layout_width="200dp"
+                    android:layout_height="150dp"
+                    android:src="@drawable/standing_bicycle_crunch"
+                    android:layout_alignParentRight="true"/>
+
+            </RelativeLayout>
+            <View
+                android:layout_width="340dp"
+                android:layout_height="2dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="2dp"
+                android:background="@color/black" />
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="130dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="20sp"
+                    android:fontFamily="@font/arima_madurai_medium"
+                    android:text="RUSSIAN TWIST"
+                    android:textSize="25sp"
+                    android:textColor="@color/dark_blue"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/arima_madurai_medium"
+                    android:padding="20sp"
+                    android:text="X 12 "
+                    android:textColor="@color/dark_blue"
+                    android:textSize="15sp"
+                    android:layout_alignParentBottom="true"/>
+
+                <pl.droidsonroids.gif.GifImageView
+                    android:layout_width="200dp"
+                    android:layout_height="150dp"
+                    android:src="@drawable/russian_twist"
+                    android:layout_alignParentRight="true"/>
+
+            </RelativeLayout>
+            <View
+                android:layout_width="340dp"
+                android:layout_height="2dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="2dp"
+                android:background="@color/black" />
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="130dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="20sp"
+                    android:fontFamily="@font/arima_madurai_medium"
+                    android:text="MOUNTAIN CHIMBER"
+                    android:textSize="22sp"
+                    android:textColor="@color/dark_blue"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/arima_madurai_medium"
+                    android:padding="20sp"
+                    android:text="X 10 "
+                    android:textColor="@color/dark_blue"
+                    android:textSize="15sp"
+                    android:layout_alignParentBottom="true"/>
+
+                <pl.droidsonroids.gif.GifImageView
+                    android:layout_width="200dp"
+                    android:layout_height="150dp"
+                    android:src="@drawable/mountain_climber"
+                    android:layout_alignParentRight="true"/>
+
+            </RelativeLayout>
+            <View
+                android:layout_width="340dp"
+                android:layout_height="2dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="2dp"
+                android:background="@color/black" />
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="130dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="20sp"
+                    android:fontFamily="@font/arima_madurai_medium"
+                    android:text="FLUTTER KICKS "
+                    android:textSize="25sp"
+                    android:textColor="@color/dark_blue"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/arima_madurai_medium"
+                    android:padding="20sp"
+                    android:text="X 8 "
+                    android:textColor="@color/dark_blue"
+                    android:textSize="15sp"
+                    android:layout_alignParentBottom="true"/>
+
+                <pl.droidsonroids.gif.GifImageView
+                    android:layout_width="200dp"
+                    android:layout_height="150dp"
+                    android:src="@drawable/flutter_kick"
+                    android:layout_alignParentRight="true"/>
+
+            </RelativeLayout>
+            <View
+                android:layout_width="340dp"
+                android:layout_height="2dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="2dp"
+                android:background="@color/black" />
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="130dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="20sp"
+                    android:fontFamily="@font/arima_madurai_medium"
+                    android:text="LEG ARISE"
+                    android:textSize="25sp"
+                    android:textColor="@color/dark_blue"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/arima_madurai_medium"
+                    android:padding="20sp"
+                    android:text="X 8 "
+                    android:textColor="@color/dark_blue"
+                    android:textSize="15sp"
+                    android:layout_alignParentBottom="true"/>
+
+                <pl.droidsonroids.gif.GifImageView
+                    android:layout_width="200dp"
+                    android:layout_height="150dp"
+                    android:src="@drawable/legraise"
+                    android:layout_alignParentRight="true"/>
+
+            </RelativeLayout>
+            <View
+                android:layout_width="340dp"
+                android:layout_height="2dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="2dp"
+                android:background="@color/black" />
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="130dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="20sp"
+                    android:fontFamily="@font/arima_madurai_medium"
+                    android:text="BUTT BRIDGE "
+                    android:textSize="25sp"
+                    android:textColor="@color/dark_blue"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/arima_madurai_medium"
+                    android:padding="20sp"
+                    android:text="30 Seconds "
+                    android:textColor="@color/dark_blue"
+                    android:textSize="15sp"
+                    android:layout_alignParentBottom="true"/>
+
+                <pl.droidsonroids.gif.GifImageView
+                    android:layout_width="200dp"
+                    android:layout_height="150dp"
+                    android:src="@drawable/buttbridge"
+                    android:layout_alignParentRight="true"/>
+
+            </RelativeLayout>
+            <View
+                android:layout_width="340dp"
+                android:layout_height="2dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="2dp"
+                android:background="@color/black" />
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="130dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="20sp"
+                    android:fontFamily="@font/arima_madurai_medium"
+                    android:text="SKIPPING"
+                    android:textSize="25sp"
+                    android:textColor="@color/dark_blue"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/arima_madurai_medium"
+                    android:padding="20sp"
+                    android:text="30 Seconds "
+                    android:textColor="@color/dark_blue"
+                    android:textSize="15sp"
+                    android:layout_alignParentBottom="true"/>
+
+                <pl.droidsonroids.gif.GifImageView
+                    android:layout_width="200dp"
+                    android:layout_height="150dp"
+                    android:src="@drawable/skipping_without_rope"
+                    android:layout_alignParentRight="true"/>
+
+            </RelativeLayout>
+            <View
+                android:layout_width="340dp"
+                android:layout_height="2dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="2dp"
+                android:background="@color/black" />
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="130dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="20sp"
+                    android:fontFamily="@font/arima_madurai_medium"
+                    android:text="STANDING BICYCLE CRUNCH"
+                    android:textSize="15sp"
+                    android:textColor="@color/dark_blue"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/arima_madurai_medium"
+                    android:padding="20sp"
+                    android:text="30 Seconds "
+                    android:textColor="@color/dark_blue"
+                    android:textSize="15sp"
+                    android:layout_alignParentBottom="true"/>
+
+                <pl.droidsonroids.gif.GifImageView
+                    android:layout_width="200dp"
+                    android:layout_height="150dp"
+                    android:src="@drawable/standing_bicycle_crunch"
+                    android:layout_alignParentRight="true"/>
+
+            </RelativeLayout>
+            <View
+                android:layout_width="340dp"
+                android:layout_height="2dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="2dp"
+                android:background="@color/black" />
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="130dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="20sp"
+                    android:fontFamily="@font/arima_madurai_medium"
+                    android:text="RUSSIAN TWIST"
+                    android:textSize="25sp"
+                    android:textColor="@color/dark_blue"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/arima_madurai_medium"
+                    android:padding="20sp"
+                    android:text="30 Seconds "
+                    android:textColor="@color/dark_blue"
+                    android:textSize="15sp"
+                    android:layout_alignParentBottom="true"/>
+
+                <pl.droidsonroids.gif.GifImageView
+                    android:layout_width="200dp"
+                    android:layout_height="150dp"
+                    android:src="@drawable/russian_twist"
+                    android:layout_alignParentRight="true"/>
+
+            </RelativeLayout>
+            <View
+                android:layout_width="340dp"
+                android:layout_height="2dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="2dp"
+                android:background="@color/black" />
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="130dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="20sp"
+                    android:fontFamily="@font/arima_madurai_medium"
+                    android:text="LEG ARISE"
+                    android:textSize="25sp"
+                    android:textColor="@color/dark_blue"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/arima_madurai_medium"
+                    android:padding="20sp"
+                    android:text="30 Seconds "
+                    android:textColor="@color/dark_blue"
+                    android:textSize="15sp"
+                    android:layout_alignParentBottom="true"/>
+
+                <pl.droidsonroids.gif.GifImageView
+                    android:layout_width="200dp"
+                    android:layout_height="150dp"
+                    android:src="@drawable/legraise"
+                    android:layout_alignParentRight="true"/>
+
+            </RelativeLayout>
+            <View
+                android:layout_width="340dp"
+                android:layout_height="2dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="2dp"
+                android:background="@color/black" />
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="130dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="20sp"
+                    android:fontFamily="@font/arima_madurai_medium"
+                    android:text="BUTT BRIDGE"
+                    android:textSize="25sp"
+                    android:textColor="@color/dark_blue"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/arima_madurai_medium"
+                    android:padding="20sp"
+                    android:text="30 Seconds "
+                    android:textColor="@color/dark_blue"
+                    android:textSize="15sp"
+                    android:layout_alignParentBottom="true"/>
+
+                <pl.droidsonroids.gif.GifImageView
+                    android:layout_width="200dp"
+                    android:layout_height="150dp"
+                    android:src="@drawable/buttbridge"
+                    android:layout_alignParentRight="true"/>
+
+            </RelativeLayout>
+            <View
+                android:layout_width="340dp"
+                android:layout_height="2dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="2dp"
+                android:background="@color/black" />
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="130dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="20sp"
+                    android:fontFamily="@font/arima_madurai_medium"
+                    android:text="PLANK"
+                    android:textSize="25sp"
+                    android:textColor="@color/dark_blue"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/arima_madurai_medium"
+                    android:padding="20sp"
+                    android:text="30 Seconds "
+                    android:textColor="@color/dark_blue"
+                    android:textSize="15sp"
+                    android:layout_alignParentBottom="true"/>
+
+                <pl.droidsonroids.gif.GifImageView
+                    android:layout_width="200dp"
+                    android:layout_height="150dp"
+                    android:src="@drawable/plank"
+                    android:layout_alignParentRight="true"/>
+
+            </RelativeLayout>
+            <View
+                android:layout_width="340dp"
+                android:layout_height="2dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="2dp"
+                android:background="@color/black" />
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="130dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="20sp"
+                    android:fontFamily="@font/arima_madurai_medium"
+                    android:text="COBRA STRETCH"
+                    android:textSize="25sp"
+                    android:textColor="@color/dark_blue"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/arima_madurai_medium"
+                    android:padding="20sp"
+                    android:text="30 Seconds "
+                    android:textColor="@color/dark_blue"
+                    android:textSize="15sp"
+                    android:layout_alignParentBottom="true"/>
+
+                <pl.droidsonroids.gif.GifImageView
+                    android:layout_width="200dp"
+                    android:layout_height="150dp"
+                    android:src="@drawable/cobra_strech"
+                    android:layout_alignParentRight="true"/>
+
+            </RelativeLayout>
+            <View
+                android:layout_width="340dp"
+                android:layout_height="2dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="2dp"
+                android:background="@color/black" />
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="130dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="20sp"
+                    android:fontFamily="@font/arima_madurai_medium"
+                    android:text="LYING TWIST STRETCH LEFT"
+                    android:textSize="15sp"
+                    android:textColor="@color/dark_blue"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/arima_madurai_medium"
+                    android:padding="20sp"
+                    android:text="30 Seconds "
+                    android:textColor="@color/dark_blue"
+                    android:textSize="15sp"
+                    android:layout_alignParentBottom="true"/>
+
+                <pl.droidsonroids.gif.GifImageView
+                    android:layout_width="200dp"
+                    android:layout_height="150dp"
+                    android:src="@drawable/lying_twist_stretch_left"
+                    android:layout_alignParentRight="true"/>
+            </RelativeLayout>
+
+        </LinearLayout>
+    </ScrollView>
+    <Button
+        android:id="@+id/startExercise"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_margin="10dp"
+        android:text="START"
+        android:padding="10dp"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/girls_round_corner"/>
+
+
+</RelativeLayout>

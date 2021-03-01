@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.ultimatefitness"
+    tools:ignore="ExtraText">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <application
+        android:icon="@drawable/splashcircle"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/splashcircle"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.UltimateFitness">
+        <activity android:name=".female.exerciseFemale.ArmsAllExercise.ArmsCrossJumpingJacks"></activity>
+        <activity android:name=".female.exerciseFemale.ArmsAllExercise.StandingBicepsStretchRight" />
+        <activity android:name=".female.exerciseFemale.ArmsAllExercise.StandingBicepsStretchLeft" />
+        <activity android:name=".female.exerciseFemale.ArmsAllExercise.TricepsStretchRight" />
+        <activity android:name=".female.exerciseFemale.ArmsAllExercise.TricpesStretchLeft" />
+        <activity android:name=".female.exerciseFemale.ArmsAllExercise.BigsArmCircle" />
+        <activity android:name=".female.exerciseFemale.ArmsAllExercise.ArmScissors" />
+        <activity android:name=".female.exerciseFemale.ArmsAllExercise.UpDownPlank" />
+        <activity android:name=".female.exerciseFemale.ArmsAllExercise.AlternativeHooks" />
+        <activity android:name=".female.exerciseFemale.ArmsAllExercise.KneePushUps" />
+        <activity android:name=".female.exerciseFemale.ArmsAllExercise.ArmsCircle" />
+        <activity android:name=".female.exerciseFemale.ArmsAllExercise.PushUps" />
+        <activity android:name=".female.exerciseFemale.ArmsAllExercise.TricepsDips" />
+        <activity android:name=".female.exerciseFemale.ArmsAllExercise.Punches" />
+        <activity android:name=".female.exerciseFemale.ArmsAllExercise.DyanamicChest" />
+        <activity android:name=".female.exerciseFemale.exerciseStartActivity.absAllExercise.CrossJumpingJack" />
+        <activity android:name=".female.exerciseFemale.exerciseStartActivity.absAllExercise.LyingTwistStretchLeft" />
+        <activity android:name=".female.exerciseFemale.exerciseStartActivity.absAllExercise.CobraStretch" />
+        <activity android:name=".female.exerciseFemale.exerciseStartActivity.absAllExercise.Plank" />
+        <activity android:name=".female.exerciseFemale.exerciseStartActivity.absAllExercise.Skipping" />
+        <activity android:name=".female.exerciseFemale.exerciseStartActivity.absAllExercise.ButtBridge" />
+        <activity android:name=".female.exerciseFemale.exerciseStartActivity.absAllExercise.LegsArise" />
+        <activity android:name=".female.exerciseFemale.exerciseStartActivity.absAllExercise.FlutterKicks" />
+        <activity android:name=".female.exerciseFemale.exerciseStartActivity.absAllExercise.MountainClimber" />
+        <activity android:name=".female.exerciseFemale.exerciseStartActivity.absAllExercise.RussianTwist" />
+        <activity android:name=".female.exerciseFemale.exerciseStartActivity.absAllExercise.StandingBycycleCrunches" />
+        <activity android:name=".female.exerciseFemale.exerciseStartActivity.absAllExercise.HighStepping" />
+        <activity android:name=".male.exercises.ForearmMaleWorkout" />
+        <activity android:name=".male.exercises.CardioMaleWorkout" />
+        <activity android:name=".male.exercises.AbsMalwWorkout" />
+        <activity android:name=".male.exercises.LegsMaleWorkout" />
+        <activity android:name=".male.exercises.ShoulderMaleWorkout" />
+        <activity android:name=".male.exercises.TricepsMaleWokout" />
+        <activity android:name=".male.exercises.BicepsMaleWorkout" />
+        <activity android:name=".male.exercises.ChestMaleWorkout" />
+        <activity android:name=".male.exercises.BackMaleWorkout" />
+        <activity android:name=".female.exerciseFemale.ThighWorkout" />
+        <activity android:name=".female.exerciseFemale.ArmsWorkout" />
+        <activity android:name=".female.exerciseFemale.ButtWorkout" />
+        <activity android:name=".female.exerciseFemale.AbsWorkout" />
+        <activity android:name=".female.exerciseFemale.FullBodyGirlWorkout" />
+        <activity android:name=".male.exercises.FullbodyMenExercise" />
+        <activity android:name=".male.bottomNavigation.EditProfilePhoto" />
+        <activity android:name=".male.bottomNavigation.LoginActivity" />
+        <activity android:name=".male.bottomNavigation.ProfileActivity" />
+        <activity android:name=".male.bottomNavigation.RegisterActivity" />
+        <activity android:name=".male.bottomNavigation.UtiltiyMaleActivity" />
+        <activity android:name=".male.bottomNavigation.TipsMaleActivity" />
+        <activity android:name=".male.bottomNavigation.PlanMaleActivity" />
+        <activity android:name=".calculators.FatCalculator" />
+        <activity android:name=".calculators.ProteinCalculator" />
+        <activity android:name=".calculators.BmiCalculator" />
+        <activity android:name=".female.FullbodyworkoutActivity" />
+        <activity android:name=".bottom_menu.PlanActivity" />
+        <activity android:name=".bottom_menu.UtilityActivity" />
+        <activity android:name=".bottom_menu.TipsActivity" />
+        <activity android:name=".female.FemaleActivity" />
+        <activity android:name=".male.MaleActivity" />
+        <activity android:name=".MainActivity" />
+        <activity android:name=".SplashActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.theartofdev.edmodo.cropper.CropImageActivity"
+            android:theme="@style/Base.Theme.AppCompat" />
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+    </application>
+
+</manifest>

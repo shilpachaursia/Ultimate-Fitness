@@ -1,0 +1,565 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:id="@+id/tool">
+
+        <ImageView
+            android:id="@+id/bact_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:padding="15dp"
+            android:src="@drawable/back_btn" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Weight Loss "
+            android:textSize="25sp"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/black"
+            android:layout_marginLeft="50dp"/>
+
+        <ImageView
+            android:id="@+id/search_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:padding="15dp"
+            android:src="@drawable/search" />
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="55dp"
+        android:layout_marginBottom="55dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="5dp">
+
+            <TextView
+                android:id="@+id/titleLoss"
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:text="7-Day Indian Diet Chart For Weight Loss For Female"
+                android:textSize="20sp"
+                android:gravity="center"
+                android:textStyle="bold"/>
+
+            //monday
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_below="@+id/titleLoss"
+                android:text="     MONDAY"
+                android:textSize="20dp"
+                android:textColor="@color/primary_text1"
+                android:layout_marginTop="10dp"
+                android:id="@+id/monday"/>
+            <TextView
+                android:layout_below="@+id/monday"
+                android:id="@+id/monbrek"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Breakfast: "
+                android:textStyle="bold"
+                android:textSize="15sp"
+                android:textColor="@color/primary1"/>
+            <TextView
+                android:id="@+id/monbrekdics"
+                android:layout_below="@+id/monday"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text=" Sambar with 2 brown rice idlis/ Paneer sandwich with mint chutney: "
+                android:textStyle="italic"
+                android:layout_marginLeft="70dp"
+                android:textSize="15sp"
+                android:textColor="@color/black"/>
+            <TextView
+                android:layout_marginTop="20dp"
+                android:layout_below="@+id/monbrek"
+                android:id="@+id/monlunch"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Lunch: "
+                android:textStyle="bold"
+                android:textSize="15sp"
+                android:textColor="@color/primary1"/>
+            <TextView
+                android:layout_below="@+id/monbrekdics"
+                android:id="@+id/monlunchdic"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text=" Whole-grain roti with mixed-vegetable curry with one dal."
+                android:textStyle="italic"
+                android:layout_marginLeft="70dp"
+                android:textSize="15sp"
+                android:textColor="@color/black"/>
+            <TextView
+                android:layout_below="@+id/monlunch"
+                android:id="@+id/mondinner"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="15dp"
+                android:text="Dinner : "
+                android:textStyle="bold"
+                android:textSize="15sp"
+                android:textColor="@color/primary1"/>
+            <TextView
+                android:layout_below="@+id/monlunchdic"
+                android:id="@+id/mondinnerdic"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Tofu/chicken curry with mixed vegetables and a fresh spinach salad/chicken gravy with 2 multigrain rotis."
+                android:textStyle="italic"
+                android:layout_marginLeft="70dp"
+                android:textSize="15sp"
+                android:textColor="@color/black"/>
+
+            //tuesday
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_below="@+id/monlunchdic"
+                android:text="     TUESDAY"
+                android:textSize="20dp"
+                android:textColor="@color/primary_text1"
+                android:layout_marginTop="60dp"
+                android:id="@+id/tuseday"/>
+            <TextView
+                android:layout_below="@+id/tuseday"
+                android:id="@+id/tbrek"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Breakfast: "
+                android:textStyle="bold"
+                android:textSize="15sp"
+                android:textColor="@color/primary1"/>
+            <TextView
+                android:id="@+id/tdaybrekdis"
+                android:layout_below="@+id/tuseday"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text=" Chana dal pancakes with mixed vegetables and a glass of milk/ bread and egg with fruits. "
+                android:textStyle="italic"
+                android:layout_marginLeft="70dp"
+                android:textSize="15sp"
+                android:textColor="@color/black"/>
+            <TextView
+                android:layout_marginTop="20dp"
+                android:layout_below="@+id/tbrek"
+                android:id="@+id/tlunch"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Lunch: "
+                android:textStyle="bold"
+                android:textSize="15sp"
+                android:textColor="@color/primary1"/>
+            <TextView
+                android:layout_below="@+id/tdaybrekdis"
+                android:id="@+id/tlunchdisc"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Chickpea curry with brown rice/ Brown rice with dal."
+                android:textStyle="italic"
+                android:layout_marginLeft="70dp"
+                android:textSize="15sp"
+                android:textColor="@color/black"/>
+            <TextView
+                android:layout_below="@+id/tlunch"
+                android:id="@+id/tdinner"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="10dp"
+                android:text="Dinner : "
+                android:textStyle="bold"
+                android:textSize="15sp"
+                android:textColor="@color/primary1"/>
+            <TextView
+                android:layout_below="@+id/tlunchdisc"
+                android:id="@+id/tdinnerdisc"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Khichdi with sprout salad/Veg paratha with raita"
+                android:textStyle="italic"
+                android:layout_marginLeft="70dp"
+                android:textSize="15sp"
+                android:textColor="@color/black"
+                android:layout_marginTop="15dp"/>
+
+            /wednesday
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_below="@+id/tdinnerdisc"
+                android:text="     WEDNESDAY"
+                android:textSize="20dp"
+                android:textColor="@color/primary_text1"
+                android:layout_marginTop="20dp"
+                android:id="@+id/WEDNESDAY"/>
+            <TextView
+                android:layout_below="@+id/WEDNESDAY"
+                android:id="@+id/wbrek"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Breakfast: "
+                android:textStyle="bold"
+                android:textSize="15sp"
+                android:textColor="@color/primary1"/>
+            <TextView
+                android:id="@+id/wdaybrekdis"
+                android:layout_below="@+id/WEDNESDAY"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text=" Apple cinnamon porridge/ Vegetable uttapam with sambhar "
+                android:textStyle="italic"
+                android:layout_marginLeft="70dp"
+                android:textSize="15sp"
+                android:textColor="@color/black"/>
+            <TextView
+                android:layout_marginTop="20dp"
+                android:layout_below="@+id/wbrek"
+                android:id="@+id/wlunch"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Lunch: "
+                android:textStyle="bold"
+                android:textSize="15sp"
+                android:textColor="@color/primary1"/>
+            <TextView
+                android:layout_below="@+id/wdaybrekdis"
+                android:id="@+id/wlunchdisc"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Whole-grain roti with tofu/ non veg and mixed vegetables."
+                android:textStyle="italic"
+                android:layout_marginLeft="70dp"
+                android:textSize="15sp"
+                android:textColor="@color/black"/>
+            <TextView
+                android:layout_below="@+id/wlunch"
+                android:id="@+id/wdinner"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="15dp"
+                android:text="Dinner : "
+                android:textStyle="bold"
+                android:textSize="15sp"
+                android:textColor="@color/primary1" />
+            <TextView
+                android:layout_below="@+id/wlunchdisc"
+                android:id="@+id/wdinnerdisc"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Palak paneer with brown rice and vegetables/ 2 Multigrain rotis with chicken and curd"
+                android:textStyle="italic"
+                android:layout_marginLeft="70dp"
+                android:textSize="15sp"
+                android:textColor="@color/black"
+                android:layout_marginTop="1dp"/>
+
+            //thursday
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_below="@+id/wdinnerdisc"
+                android:text="     THURSDAY"
+                android:textSize="20dp"
+                android:textColor="@color/primary_text1"
+                android:layout_marginTop="20dp"
+                android:id="@+id/THURSDAY"/>
+            <TextView
+                android:layout_below="@+id/THURSDAY"
+                android:id="@+id/thbrek"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Breakfast: "
+                android:textStyle="bold"
+                android:textSize="15sp"
+                android:textColor="@color/primary1"/>
+            <TextView
+                android:id="@+id/thdaybrekdis"
+                android:layout_below="@+id/THURSDAY"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Yogurt with sliced fruits and sunflower seeds/ vegetable poha "
+                android:textStyle="italic"
+                android:layout_marginLeft="70dp"
+                android:textSize="15sp"
+                android:textColor="@color/black"/>
+            <TextView
+                android:layout_marginTop="20dp"
+                android:layout_below="@+id/thbrek"
+                android:id="@+id/thlunch"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Lunch: "
+                android:textStyle="bold"
+                android:textSize="15sp"
+                android:textColor="@color/primary1"/>
+            <TextView
+                android:layout_below="@+id/thdaybrekdis"
+                android:id="@+id/thlunchdisc"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Whole-grain roti with vegetable sabzi/ Dal with veg or non veg sabzi and brown rice."
+                android:textStyle="italic"
+                android:layout_marginLeft="70dp"
+                android:textSize="15sp"
+                android:textColor="@color/black"/>
+            <TextView
+                android:layout_below="@+id/thlunch"
+                android:id="@+id/thdinner"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="15dp"
+                android:text="Dinner : "
+                android:textStyle="bold"
+                android:textSize="15sp"
+                android:textColor="@color/primary1" />
+            <TextView
+                android:layout_below="@+id/thlunchdisc"
+                android:id="@+id/thdinnerdisc"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Chana masala with basmati rice and green salad/ One bowl of fruits and vegetables with multigrain rotis"
+                android:textStyle="italic"
+                android:layout_marginLeft="70dp"
+                android:textSize="15sp"
+                android:textColor="@color/black"
+                android:layout_marginTop="1dp"/>
+
+            //friday
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_below="@+id/thdinnerdisc"
+                android:text="     FRIDAY"
+                android:textSize="20dp"
+                android:textColor="@color/primary_text1"
+                android:layout_marginTop="20dp"
+                android:id="@+id/FRIDAY"/>
+            <TextView
+                android:layout_below="@+id/FRIDAY"
+                android:id="@+id/fbrek"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Breakfast: "
+                android:textStyle="bold"
+                android:textSize="15sp"
+                android:textColor="@color/primary1"/>
+            <TextView
+                android:id="@+id/fbrekdic"
+                android:layout_below="@+id/FRIDAY"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Vegetable dalia and a glass of milk/ 3-4 dal paddu with sambar "
+                android:textStyle="italic"
+                android:layout_marginLeft="70dp"
+                android:textSize="15sp"
+                android:textColor="@color/black"/>
+            <TextView
+                android:layout_marginTop="20dp"
+                android:layout_below="@+id/fbrek"
+                android:id="@+id/flunch"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Lunch: "
+                android:textStyle="bold"
+                android:textSize="15sp"
+                android:textColor="@color/primary1"/>
+            <TextView
+                android:layout_below="@+id/fbrekdic"
+                android:id="@+id/flunchdisc"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Vegetable sambar with brown rice/ 2 multigrain roti with veg/non veg curry."
+                android:textStyle="italic"
+                android:layout_marginLeft="70dp"
+                android:textSize="15sp"
+                android:textColor="@color/black"/>
+            <TextView
+                android:layout_below="@+id/flunch"
+                android:id="@+id/fdinner"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="15dp"
+                android:text="Dinner : "
+                android:textStyle="bold"
+                android:textSize="15sp"
+                android:textColor="@color/primary1" />
+            <TextView
+                android:layout_below="@+id/flunchdisc"
+                android:id="@+id/fdinnerdisc"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Tofu curry with potatoes and mixed vegetables/ chicken curry with 2 multigrain rotis."
+                android:textStyle="italic"
+                android:layout_marginLeft="70dp"
+                android:textSize="15sp"
+                android:textColor="@color/black"
+                android:layout_marginTop="1dp"/>
+
+            //saturday
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_below="@+id/fdinnerdisc"
+                android:text="     SATURDAY"
+                android:textSize="20dp"
+                android:textColor="@color/primary_text1"
+                android:layout_marginTop="20dp"
+                android:id="@+id/SATURDAY"/>
+            <TextView
+                android:layout_below="@+id/SATURDAY"
+                android:id="@+id/sbrek"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Breakfast: "
+                android:textStyle="bold"
+                android:textSize="15sp"
+                android:textColor="@color/primary1"/>
+            <TextView
+                android:id="@+id/sbrekdic"
+                android:layout_below="@+id/SATURDAY"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Multigrain parathas with avocado and sliced papaya/ dal paratha with mixed vegetables. "
+                android:textStyle="italic"
+                android:layout_marginLeft="70dp"
+                android:textSize="15sp"
+                android:textColor="@color/black"/>
+            <TextView
+                android:layout_marginTop="20dp"
+                android:layout_below="@+id/sbrek"
+                android:id="@+id/slunch"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Lunch: "
+                android:textStyle="bold"
+                android:textSize="15sp"
+                android:textColor="@color/primary1"/>
+            <TextView
+                android:layout_below="@+id/sbrekdic"
+                android:id="@+id/slunchdisc"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Large salad with rajma curry and quinoa/ one bowl mixed vegetable kadai."
+                android:textStyle="italic"
+                android:layout_marginLeft="70dp"
+                android:textSize="15sp"
+                android:textColor="@color/black"/>
+            <TextView
+                android:layout_below="@+id/slunch"
+                android:id="@+id/sdinner"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="15dp"
+                android:text="Dinner : "
+                android:textStyle="bold"
+                android:textSize="15sp"
+                android:textColor="@color/primary1" />
+            <TextView
+                android:layout_below="@+id/slunchdisc"
+                android:id="@+id/sdinnerdisc"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Lentil pancakes with tofu tikka masala/ green salad with mixed vegetables and multigrain roti."
+                android:textStyle="italic"
+                android:layout_marginLeft="70dp"
+                android:textSize="15sp"
+                android:textColor="@color/black"
+                android:layout_marginTop="1dp"/>
+
+            //sunday
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_below="@+id/sdinnerdisc"
+                android:text="     SUNDAY"
+                android:textSize="20dp"
+                android:textColor="@color/primary_text1"
+                android:layout_marginTop="20dp"
+                android:id="@+id/SUNDAY"/>
+            <TextView
+                android:layout_below="@+id/SUNDAY"
+                android:id="@+id/subrek"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Breakfast: "
+                android:textStyle="bold"
+                android:textSize="15sp"
+                android:textColor="@color/primary1"/>
+            <TextView
+                android:id="@+id/subrekdic"
+                android:layout_below="@+id/SUNDAY"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Buckwheat porridge with sliced mango/ fruit salad with a glass of milk. "
+                android:textStyle="italic"
+                android:layout_marginLeft="70dp"
+                android:textSize="15sp"
+                android:textColor="@color/black"/>
+            <TextView
+                android:layout_marginTop="20dp"
+                android:layout_below="@+id/subrek"
+                android:id="@+id/sulunch"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Lunch: "
+                android:textStyle="bold"
+                android:textSize="15sp"
+                android:textColor="@color/primary1"/>
+            <TextView
+                android:layout_below="@+id/subrekdic"
+                android:id="@+id/sulunchdisc"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Vegetable soup with whole-grain roti/ one bowl millet and dal khichdi with multigrain roti."
+                android:textStyle="italic"
+                android:layout_marginLeft="70dp"
+                android:textSize="15sp"
+                android:textColor="@color/black"/>
+            <TextView
+                android:layout_below="@+id/sulunch"
+                android:id="@+id/sudinner"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="15dp"
+                android:text="Dinner : "
+                android:textStyle="bold"
+                android:textSize="15sp"
+                android:textColor="@color/primary1" />
+            <TextView
+                android:layout_below="@+id/sulunchdisc"
+                android:id="@+id/sudinnerdisc"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Masala-baked tofu with vegetable curry/ non veg curry (chicken, seafood) with multigrain roti."
+                android:textStyle="italic"
+                android:layout_marginLeft="70dp"
+                android:textSize="15sp"
+                android:textColor="@color/black"
+                android:layout_marginTop="1dp"/>
+
+
+
+
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>

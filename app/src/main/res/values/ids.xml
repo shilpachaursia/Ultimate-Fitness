@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="viewheader" type="id" />
+    <item name="layoutprofile" type="id" />
+    <item name="textname" type="id" />
+    <item name="textabout" type="id" />
+    <item name="textPost" type="id" />
+    <item name="textfollowers" type="id" />
+    <item name="textfollowing" type="id" />
+    <item name="textpostlabel" type="id" />
+    <item name="textfollowerlabel" type="id" />
+    <item name="textfollowinglabel" type="id" />
+    <item name="imageprofile" type="id" />
+    <item name="texttag" type="id" />
+    <item name="tags_bachground" type="id" />
+    <item name="textcollection" type="id" />
+    <item name="layouttags" type="id" />
+    <item name="layoutcollection" type="id" />
+    <item name="textlatestpost" type="id" />
+    <item name="button" type="id" />
+    <item name="EditBtn" type="id" />
+    <item name="gridLayout" type="id" />
+</resources>

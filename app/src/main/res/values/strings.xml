@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Ultimate Fitness</string>
+    <string name="exercise">Exercise</string>
+    <string name="plans">Plans</string>
+    <string name="tips">Tips</string>
+    <string name="utility">Utility</string>
+    <string name="login">Login</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+</resources>
