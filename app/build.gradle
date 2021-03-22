@@ -5,7 +5,7 @@ android {
     compileSdkVersion 30
     buildToolsVersion "30.0.3"
     defaultConfig {
-        applicationId "com.UltimateFitness.ultimatefitness"
+        applicationId "com.example.ultimatefitness"
         minSdkVersion 19
         multiDexEnabled true
         targetSdkVersion 30
