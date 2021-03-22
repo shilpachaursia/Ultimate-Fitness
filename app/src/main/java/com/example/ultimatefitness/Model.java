@@ -1,6 +1,5 @@
 package com.example.ultimatefitness;
 
-
 public class Model {
     public String getTitle() {
         return Title;

@@ -4,7 +4,7 @@
     "type": "APK",
     "kind": "Directory"
   },
-  "applicationId": "com.example.ultimatefitness",
+  "applicationId": "com.UltimateFitness.ultimatefitness",
   "variantName": "processReleaseResources",
   "elements": [
     {

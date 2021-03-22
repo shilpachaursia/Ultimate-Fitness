@@ -4,11 +4,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".female.exerciseFemale.FullBodyGirlWorkout">
+    tools:context="com.example.ultimatefitness.female.exerciseFemale.FullBodyGirlWorkout">
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="52dp">
+        android:layout_height="52dp"
+        android:id="@+id/fullbodyToolbar"
+        android:background="#F1948A">
 
         <ImageView
             android:id="@+id/fullbody_bact_btn"
@@ -26,20 +28,16 @@
             android:textColor="@color/black"
             android:layout_marginLeft="50dp"/>
 
-        <ImageView
-            android:id="@+id/search_btn"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentRight="true"
-            android:layout_centerVertical="true"
-            android:padding="15dp"
-            android:src="@drawable/search" />
-
     </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/FBGFrame">
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="55dp">
+        android:layout_marginTop="51dp"
+        android:layout_marginBottom="55dp">
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -47,9 +45,8 @@
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="150dp"
-                android:layout_marginTop="5dp"
                 android:layout_marginBottom="10dp"
-                android:background="@drawable/girls_round_corner">
+                android:background="@drawable/girls_banner_color">
 
                 <TextView
                     android:id="@+id/ex_text"
@@ -57,7 +54,16 @@
                     android:layout_height="wrap_content"
                     android:padding="20sp"
                     android:fontFamily="@font/arima_madurai_medium"
-                    android:text="FULLBODY WORKOUT "
+                    android:text="Follow these exercises "
+                    android:textSize="25sp"
+                    android:textColor="@color/dark_blue"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="20sp"
+                    android:fontFamily="@font/arima_madurai_medium"
+                    android:text="for next One Month "
+                    android:layout_marginTop="28sp"
                     android:textSize="25sp"
                     android:textColor="@color/dark_blue"/>
 
@@ -89,7 +95,7 @@
                     android:padding="20sp"
                     android:fontFamily="@font/arima_madurai_medium"
                     android:text="HIGH STEPPING "
-                    android:textSize="25sp"
+                    android:textSize="20sp"
                     android:textColor="@color/dark_blue"/>
 
                 <TextView
@@ -125,7 +131,7 @@
                     android:padding="20sp"
                     android:fontFamily="@font/arima_madurai_medium"
                     android:text="SIDE HOP "
-                    android:textSize="25sp"
+                    android:textSize="20sp"
                     android:textColor="@color/dark_blue"/>
 
                 <TextView
@@ -160,7 +166,7 @@
                     android:padding="20sp"
                     android:fontFamily="@font/arima_madurai_medium"
                     android:text="SQUATS "
-                    android:textSize="25sp"
+                    android:textSize="20sp"
                     android:textColor="@color/dark_blue"/>
 
                 <TextView
@@ -195,7 +201,7 @@
                     android:padding="20sp"
                     android:fontFamily="@font/arima_madurai_medium"
                     android:text="WALL PUSH-UP "
-                    android:textSize="25sp"
+                    android:textSize="20sp"
                     android:textColor="@color/dark_blue"/>
 
                 <TextView
@@ -230,7 +236,7 @@
                     android:padding="20sp"
                     android:fontFamily="@font/arima_madurai_medium"
                     android:text="BUTT BRIDGE "
-                    android:textSize="25sp"
+                    android:textSize="20sp"
                     android:textColor="@color/dark_blue"/>
 
                 <TextView
@@ -265,7 +271,7 @@
                     android:padding="20sp"
                     android:fontFamily="@font/arima_madurai_medium"
                     android:text="FIRE HYDRANT LEFT "
-                    android:textSize="25sp"
+                    android:textSize="20sp"
                     android:textColor="@color/dark_blue"/>
 
                 <TextView
@@ -300,7 +306,7 @@
                     android:padding="20sp"
                     android:fontFamily="@font/arima_madurai_medium"
                     android:text="FIRE HYDRANT RIGHT "
-                    android:textSize="25sp"
+                    android:textSize="20sp"
                     android:textColor="@color/dark_blue"/>
 
                 <TextView
@@ -335,7 +341,7 @@
                     android:padding="20sp"
                     android:fontFamily="@font/arima_madurai_medium"
                     android:text="PLANK "
-                    android:textSize="25sp"
+                    android:textSize="20sp"
                     android:textColor="@color/dark_blue"/>
 
                 <TextView
@@ -370,7 +376,7 @@
                     android:padding="20sp"
                     android:fontFamily="@font/arima_madurai_medium"
                     android:text="COBRA STRETCH "
-                    android:textSize="25sp"
+                    android:textSize="20sp"
                     android:textColor="@color/dark_blue"/>
 
                 <TextView
@@ -405,7 +411,7 @@
                     android:padding="20sp"
                     android:fontFamily="@font/arima_madurai_medium"
                     android:text="CHILD POSE "
-                    android:textSize="25sp"
+                    android:textSize="20sp"
                     android:textColor="@color/dark_blue"/>
 
                 <TextView
@@ -463,5 +469,30 @@
 
         </LinearLayout>
     </ScrollView>
+    <Button
+        android:id="@+id/FBGStartBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/girls_round_corner"
+        android:text="Start exercise"
+        android:textSize="20sp"
+        android:layout_margin="10dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="5dp"/>
+    </RelativeLayout>
+    <com.google.android.gms.ads.AdView
+        android:id="@+id/adView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="615dp"
+        app:adSize="FULL_BANNER"
+        app:adUnitId="ca-app-pub-2342822035961981/5574761661">
+        <!--           ca-app-pub-2342822035961981/5574761661-->
+    </com.google.android.gms.ads.AdView>
+    <FrameLayout
+        android:layout_marginTop="55dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/FBGFrameChange"/>
 
 </RelativeLayout>

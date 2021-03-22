@@ -3,12 +3,13 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".female.exerciseFemale.AbsWorkout">
+    android:layout_height="match_parent">
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="52dp">
+        android:layout_height="52dp"
+        android:id="@+id/absToolbar"
+        android:background="#F1948A">
 
         <ImageView
             android:id="@+id/abs_bact_btn"
@@ -21,35 +22,31 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/adamina"
-            android:text="Abs Exercise"
+            android:text="@string/abs_exercise"
             android:textSize="30sp"
             android:textColor="@color/black"
-            android:layout_marginLeft="50dp"/>
+            android:layout_marginStart="50dp"/>
 
-        <ImageView
-            android:id="@+id/search_btn"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentRight="true"
-            android:layout_centerVertical="true"
-            android:padding="15dp"
-            android:src="@drawable/search" />
 
     </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/absScrollView"
+        android:layout_marginTop="51dp">
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="55dp">
+        android:layout_marginBottom="60dp">
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:orientation="vertical">
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="150dp"
-                android:layout_marginTop="5dp"
                 android:layout_marginBottom="10dp"
-                android:background="@drawable/girls_round_corner">
+                android:background="@drawable/girls_banner_color">
 
                 <TextView
                     android:id="@+id/ex_text"
@@ -57,7 +54,17 @@
                     android:layout_height="wrap_content"
                     android:padding="20sp"
                     android:fontFamily="@font/arima_madurai_medium"
-                    android:text="ABS WORKOUT "
+                    android:text="@string/abs_workout"
+                    android:textSize="25sp"
+                    android:textColor="@color/dark_blue"/>
+                <TextView
+                    android:id="@+id/subtext"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="20sp"
+                    android:layout_marginTop="28sp"
+                    android:fontFamily="@font/arima_madurai_medium"
+                    android:text="next One Month"
                     android:textSize="25sp"
                     android:textColor="@color/dark_blue"/>
 
@@ -66,7 +73,7 @@
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/arima_madurai_medium"
                     android:padding="20sp"
-                    android:text="30 MINUTES "
+                    android:text="@string/_30_minutes"
                     android:textColor="@color/dark_blue"
                     android:textSize="15sp"
                     android:layout_alignParentBottom="true"/>
@@ -75,8 +82,8 @@
                     android:id="@+id/ex_img"
                     android:layout_width="200dp"
                     android:layout_height="150dp"
-                    android:src="@drawable/girlspashbg"
-                    android:layout_alignParentRight="true"/>
+                    android:src="@drawable/absgirlbg"
+                    android:layout_alignParentEnd="true"/>
 
             </RelativeLayout>
 
@@ -88,8 +95,8 @@
                     android:layout_height="wrap_content"
                     android:padding="20sp"
                     android:fontFamily="@font/arima_madurai_medium"
-                    android:text=" CROSS JUMPING JACK"
-                    android:textSize="25sp"
+                    android:text="@string/cross_jumping_jack"
+                    android:textSize="20sp"
                     android:textColor="@color/dark_blue"/>
 
                 <TextView
@@ -97,7 +104,7 @@
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/arima_madurai_medium"
                     android:padding="20sp"
-                    android:text="30 Seconds "
+                    android:text="@string/x_30"
                     android:textColor="@color/dark_blue"
                     android:textSize="15sp"
                     android:layout_alignParentBottom="true"/>
@@ -106,14 +113,14 @@
                     android:layout_width="200dp"
                     android:layout_height="150dp"
                     android:src="@drawable/cross_jumpingjack"
-                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true"
                     />
 
             </RelativeLayout>
             <View
                 android:layout_width="340dp"
                 android:layout_height="2dp"
-                android:layout_marginLeft="20dp"
+                android:layout_marginStart="20dp"
                 android:layout_marginTop="2dp"
                 android:background="@color/black" />
             <RelativeLayout
@@ -124,8 +131,8 @@
                     android:layout_height="wrap_content"
                     android:padding="20sp"
                     android:fontFamily="@font/arima_madurai_medium"
-                    android:text="HIGH STEPPING"
-                    android:textSize="25sp"
+                    android:text="@string/high_stepping"
+                    android:textSize="20sp"
                     android:textColor="@color/dark_blue"/>
 
                 <TextView
@@ -133,7 +140,7 @@
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/arima_madurai_medium"
                     android:padding="20sp"
-                    android:text="30 Seconds "
+                    android:text="@string/x_30"
                     android:textColor="@color/dark_blue"
                     android:textSize="15sp"
                     android:layout_alignParentBottom="true"/>
@@ -142,13 +149,13 @@
                     android:layout_width="200dp"
                     android:layout_height="150dp"
                     android:src="@drawable/highstepping"
-                    android:layout_alignParentRight="true"/>
+                    android:layout_alignParentEnd="true"/>
 
             </RelativeLayout>
             <View
                 android:layout_width="340dp"
                 android:layout_height="2dp"
-                android:layout_marginLeft="20dp"
+                android:layout_marginStart="20dp"
                 android:layout_marginTop="2dp"
                 android:background="@color/black" />
             <RelativeLayout
@@ -159,7 +166,7 @@
                     android:layout_height="wrap_content"
                     android:padding="20sp"
                     android:fontFamily="@font/arima_madurai_medium"
-                    android:text="STANDING BICYCLE CRUNCHES "
+                    android:text="@string/standing_bicycle_crunches"
                     android:textSize="15sp"
                     android:textColor="@color/dark_blue"/>
 
@@ -168,7 +175,7 @@
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/arima_madurai_medium"
                     android:padding="20sp"
-                    android:text="X 12 "
+                    android:text="@string/x_30"
                     android:textColor="@color/dark_blue"
                     android:textSize="15sp"
                     android:layout_alignParentBottom="true"/>
@@ -177,13 +184,13 @@
                     android:layout_width="200dp"
                     android:layout_height="150dp"
                     android:src="@drawable/standing_bicycle_crunch"
-                    android:layout_alignParentRight="true"/>
+                    android:layout_alignParentEnd="true"/>
 
             </RelativeLayout>
             <View
                 android:layout_width="340dp"
                 android:layout_height="2dp"
-                android:layout_marginLeft="20dp"
+                android:layout_marginStart="20dp"
                 android:layout_marginTop="2dp"
                 android:background="@color/black" />
             <RelativeLayout
@@ -194,8 +201,8 @@
                     android:layout_height="wrap_content"
                     android:padding="20sp"
                     android:fontFamily="@font/arima_madurai_medium"
-                    android:text="RUSSIAN TWIST"
-                    android:textSize="25sp"
+                    android:text="@string/russian_twist"
+                    android:textSize="20sp"
                     android:textColor="@color/dark_blue"/>
 
                 <TextView
@@ -203,7 +210,7 @@
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/arima_madurai_medium"
                     android:padding="20sp"
-                    android:text="X 12 "
+                    android:text="@string/x_30"
                     android:textColor="@color/dark_blue"
                     android:textSize="15sp"
                     android:layout_alignParentBottom="true"/>
@@ -212,13 +219,13 @@
                     android:layout_width="200dp"
                     android:layout_height="150dp"
                     android:src="@drawable/russian_twist"
-                    android:layout_alignParentRight="true"/>
+                    android:layout_alignParentEnd="true"/>
 
             </RelativeLayout>
             <View
                 android:layout_width="340dp"
                 android:layout_height="2dp"
-                android:layout_marginLeft="20dp"
+                android:layout_marginStart="20dp"
                 android:layout_marginTop="2dp"
                 android:background="@color/black" />
             <RelativeLayout
@@ -229,8 +236,8 @@
                     android:layout_height="wrap_content"
                     android:padding="20sp"
                     android:fontFamily="@font/arima_madurai_medium"
-                    android:text="MOUNTAIN CHIMBER"
-                    android:textSize="22sp"
+                    android:text="@string/mountain_climber"
+                    android:textSize="20sp"
                     android:textColor="@color/dark_blue"/>
 
                 <TextView
@@ -238,7 +245,7 @@
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/arima_madurai_medium"
                     android:padding="20sp"
-                    android:text="X 10 "
+                    android:text="@string/x_10"
                     android:textColor="@color/dark_blue"
                     android:textSize="15sp"
                     android:layout_alignParentBottom="true"/>
@@ -247,13 +254,13 @@
                     android:layout_width="200dp"
                     android:layout_height="150dp"
                     android:src="@drawable/mountain_climber"
-                    android:layout_alignParentRight="true"/>
+                    android:layout_alignParentEnd="true"/>
 
             </RelativeLayout>
             <View
                 android:layout_width="340dp"
                 android:layout_height="2dp"
-                android:layout_marginLeft="20dp"
+                android:layout_marginStart="20dp"
                 android:layout_marginTop="2dp"
                 android:background="@color/black" />
             <RelativeLayout
@@ -264,8 +271,8 @@
                     android:layout_height="wrap_content"
                     android:padding="20sp"
                     android:fontFamily="@font/arima_madurai_medium"
-                    android:text="FLUTTER KICKS "
-                    android:textSize="25sp"
+                    android:text="@string/flutter_kicks"
+                    android:textSize="20sp"
                     android:textColor="@color/dark_blue"/>
 
                 <TextView
@@ -273,7 +280,7 @@
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/arima_madurai_medium"
                     android:padding="20sp"
-                    android:text="X 8 "
+                    android:text="@string/x_30"
                     android:textColor="@color/dark_blue"
                     android:textSize="15sp"
                     android:layout_alignParentBottom="true"/>
@@ -282,13 +289,13 @@
                     android:layout_width="200dp"
                     android:layout_height="150dp"
                     android:src="@drawable/flutter_kick"
-                    android:layout_alignParentRight="true"/>
+                    android:layout_alignParentEnd="true"/>
 
             </RelativeLayout>
             <View
                 android:layout_width="340dp"
                 android:layout_height="2dp"
-                android:layout_marginLeft="20dp"
+                android:layout_marginStart="20dp"
                 android:layout_marginTop="2dp"
                 android:background="@color/black" />
             <RelativeLayout
@@ -299,8 +306,8 @@
                     android:layout_height="wrap_content"
                     android:padding="20sp"
                     android:fontFamily="@font/arima_madurai_medium"
-                    android:text="LEG ARISE"
-                    android:textSize="25sp"
+                    android:text="@string/leg_arise"
+                    android:textSize="20sp"
                     android:textColor="@color/dark_blue"/>
 
                 <TextView
@@ -308,7 +315,7 @@
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/arima_madurai_medium"
                     android:padding="20sp"
-                    android:text="X 8 "
+                    android:text="@string/x_30"
                     android:textColor="@color/dark_blue"
                     android:textSize="15sp"
                     android:layout_alignParentBottom="true"/>
@@ -316,14 +323,14 @@
                 <pl.droidsonroids.gif.GifImageView
                     android:layout_width="200dp"
                     android:layout_height="150dp"
-                    android:src="@drawable/legraise"
-                    android:layout_alignParentRight="true"/>
+                    android:src="@drawable/girllegaraises"
+                    android:layout_alignParentEnd="true"/>
 
             </RelativeLayout>
             <View
                 android:layout_width="340dp"
                 android:layout_height="2dp"
-                android:layout_marginLeft="20dp"
+                android:layout_marginStart="20dp"
                 android:layout_marginTop="2dp"
                 android:background="@color/black" />
             <RelativeLayout
@@ -334,8 +341,8 @@
                     android:layout_height="wrap_content"
                     android:padding="20sp"
                     android:fontFamily="@font/arima_madurai_medium"
-                    android:text="BUTT BRIDGE "
-                    android:textSize="25sp"
+                    android:text="@string/butt_bridge"
+                    android:textSize="20sp"
                     android:textColor="@color/dark_blue"/>
 
                 <TextView
@@ -343,7 +350,7 @@
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/arima_madurai_medium"
                     android:padding="20sp"
-                    android:text="30 Seconds "
+                    android:text="@string/x_30"
                     android:textColor="@color/dark_blue"
                     android:textSize="15sp"
                     android:layout_alignParentBottom="true"/>
@@ -352,13 +359,13 @@
                     android:layout_width="200dp"
                     android:layout_height="150dp"
                     android:src="@drawable/buttbridge"
-                    android:layout_alignParentRight="true"/>
+                    android:layout_alignParentEnd="true"/>
 
             </RelativeLayout>
             <View
                 android:layout_width="340dp"
                 android:layout_height="2dp"
-                android:layout_marginLeft="20dp"
+                android:layout_marginStart="20dp"
                 android:layout_marginTop="2dp"
                 android:background="@color/black" />
             <RelativeLayout
@@ -369,42 +376,7 @@
                     android:layout_height="wrap_content"
                     android:padding="20sp"
                     android:fontFamily="@font/arima_madurai_medium"
-                    android:text="SKIPPING"
-                    android:textSize="25sp"
-                    android:textColor="@color/dark_blue"/>
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/arima_madurai_medium"
-                    android:padding="20sp"
-                    android:text="30 Seconds "
-                    android:textColor="@color/dark_blue"
-                    android:textSize="15sp"
-                    android:layout_alignParentBottom="true"/>
-
-                <pl.droidsonroids.gif.GifImageView
-                    android:layout_width="200dp"
-                    android:layout_height="150dp"
-                    android:src="@drawable/skipping_without_rope"
-                    android:layout_alignParentRight="true"/>
-
-            </RelativeLayout>
-            <View
-                android:layout_width="340dp"
-                android:layout_height="2dp"
-                android:layout_marginLeft="20dp"
-                android:layout_marginTop="2dp"
-                android:background="@color/black" />
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="130dp">
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:padding="20sp"
-                    android:fontFamily="@font/arima_madurai_medium"
-                    android:text="STANDING BICYCLE CRUNCH"
+                    android:text="@string/standing_bicycle_crunch"
                     android:textSize="15sp"
                     android:textColor="@color/dark_blue"/>
 
@@ -413,7 +385,7 @@
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/arima_madurai_medium"
                     android:padding="20sp"
-                    android:text="30 Seconds "
+                    android:text="@string/x_30"
                     android:textColor="@color/dark_blue"
                     android:textSize="15sp"
                     android:layout_alignParentBottom="true"/>
@@ -422,13 +394,13 @@
                     android:layout_width="200dp"
                     android:layout_height="150dp"
                     android:src="@drawable/standing_bicycle_crunch"
-                    android:layout_alignParentRight="true"/>
+                    android:layout_alignParentEnd="true"/>
 
             </RelativeLayout>
             <View
                 android:layout_width="340dp"
                 android:layout_height="2dp"
-                android:layout_marginLeft="20dp"
+                android:layout_marginStart="20dp"
                 android:layout_marginTop="2dp"
                 android:background="@color/black" />
             <RelativeLayout
@@ -439,8 +411,8 @@
                     android:layout_height="wrap_content"
                     android:padding="20sp"
                     android:fontFamily="@font/arima_madurai_medium"
-                    android:text="RUSSIAN TWIST"
-                    android:textSize="25sp"
+                    android:text="@string/russian_twist"
+                    android:textSize="20sp"
                     android:textColor="@color/dark_blue"/>
 
                 <TextView
@@ -448,7 +420,7 @@
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/arima_madurai_medium"
                     android:padding="20sp"
-                    android:text="30 Seconds "
+                    android:text="@string/x_30"
                     android:textColor="@color/dark_blue"
                     android:textSize="15sp"
                     android:layout_alignParentBottom="true"/>
@@ -457,13 +429,13 @@
                     android:layout_width="200dp"
                     android:layout_height="150dp"
                     android:src="@drawable/russian_twist"
-                    android:layout_alignParentRight="true"/>
+                    android:layout_alignParentEnd="true"/>
 
             </RelativeLayout>
             <View
                 android:layout_width="340dp"
                 android:layout_height="2dp"
-                android:layout_marginLeft="20dp"
+                android:layout_marginStart="20dp"
                 android:layout_marginTop="2dp"
                 android:background="@color/black" />
             <RelativeLayout
@@ -474,8 +446,8 @@
                     android:layout_height="wrap_content"
                     android:padding="20sp"
                     android:fontFamily="@font/arima_madurai_medium"
-                    android:text="LEG ARISE"
-                    android:textSize="25sp"
+                    android:text="@string/leg_arise"
+                    android:textSize="20sp"
                     android:textColor="@color/dark_blue"/>
 
                 <TextView
@@ -483,7 +455,7 @@
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/arima_madurai_medium"
                     android:padding="20sp"
-                    android:text="30 Seconds "
+                    android:text="@string/x_30"
                     android:textColor="@color/dark_blue"
                     android:textSize="15sp"
                     android:layout_alignParentBottom="true"/>
@@ -491,14 +463,14 @@
                 <pl.droidsonroids.gif.GifImageView
                     android:layout_width="200dp"
                     android:layout_height="150dp"
-                    android:src="@drawable/legraise"
-                    android:layout_alignParentRight="true"/>
+                    android:src="@drawable/girllegaraises"
+                    android:layout_alignParentEnd="true"/>
 
             </RelativeLayout>
             <View
                 android:layout_width="340dp"
                 android:layout_height="2dp"
-                android:layout_marginLeft="20dp"
+                android:layout_marginStart="20dp"
                 android:layout_marginTop="2dp"
                 android:background="@color/black" />
             <RelativeLayout
@@ -509,8 +481,8 @@
                     android:layout_height="wrap_content"
                     android:padding="20sp"
                     android:fontFamily="@font/arima_madurai_medium"
-                    android:text="BUTT BRIDGE"
-                    android:textSize="25sp"
+                    android:text="@string/butt_bridge"
+                    android:textSize="20sp"
                     android:textColor="@color/dark_blue"/>
 
                 <TextView
@@ -518,7 +490,7 @@
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/arima_madurai_medium"
                     android:padding="20sp"
-                    android:text="30 Seconds "
+                    android:text="@string/x_30"
                     android:textColor="@color/dark_blue"
                     android:textSize="15sp"
                     android:layout_alignParentBottom="true"/>
@@ -527,13 +499,13 @@
                     android:layout_width="200dp"
                     android:layout_height="150dp"
                     android:src="@drawable/buttbridge"
-                    android:layout_alignParentRight="true"/>
+                    android:layout_alignParentEnd="true"/>
 
             </RelativeLayout>
             <View
                 android:layout_width="340dp"
                 android:layout_height="2dp"
-                android:layout_marginLeft="20dp"
+                android:layout_marginStart="20dp"
                 android:layout_marginTop="2dp"
                 android:background="@color/black" />
             <RelativeLayout
@@ -544,8 +516,8 @@
                     android:layout_height="wrap_content"
                     android:padding="20sp"
                     android:fontFamily="@font/arima_madurai_medium"
-                    android:text="PLANK"
-                    android:textSize="25sp"
+                    android:text="@string/plank"
+                    android:textSize="20sp"
                     android:textColor="@color/dark_blue"/>
 
                 <TextView
@@ -553,7 +525,7 @@
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/arima_madurai_medium"
                     android:padding="20sp"
-                    android:text="30 Seconds "
+                    android:text="@string/x_30"
                     android:textColor="@color/dark_blue"
                     android:textSize="15sp"
                     android:layout_alignParentBottom="true"/>
@@ -562,13 +534,13 @@
                     android:layout_width="200dp"
                     android:layout_height="150dp"
                     android:src="@drawable/plank"
-                    android:layout_alignParentRight="true"/>
+                    android:layout_alignParentEnd="true"/>
 
             </RelativeLayout>
             <View
                 android:layout_width="340dp"
                 android:layout_height="2dp"
-                android:layout_marginLeft="20dp"
+                android:layout_marginStart="20dp"
                 android:layout_marginTop="2dp"
                 android:background="@color/black" />
             <RelativeLayout
@@ -579,8 +551,8 @@
                     android:layout_height="wrap_content"
                     android:padding="20sp"
                     android:fontFamily="@font/arima_madurai_medium"
-                    android:text="COBRA STRETCH"
-                    android:textSize="25sp"
+                    android:text="@string/cobra_stretch"
+                    android:textSize="20sp"
                     android:textColor="@color/dark_blue"/>
 
                 <TextView
@@ -588,7 +560,7 @@
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/arima_madurai_medium"
                     android:padding="20sp"
-                    android:text="30 Seconds "
+                    android:text="@string/x_30"
                     android:textColor="@color/dark_blue"
                     android:textSize="15sp"
                     android:layout_alignParentBottom="true"/>
@@ -597,13 +569,13 @@
                     android:layout_width="200dp"
                     android:layout_height="150dp"
                     android:src="@drawable/cobra_strech"
-                    android:layout_alignParentRight="true"/>
+                    android:layout_alignParentEnd="true"/>
 
             </RelativeLayout>
             <View
                 android:layout_width="340dp"
                 android:layout_height="2dp"
-                android:layout_marginLeft="20dp"
+                android:layout_marginStart="20dp"
                 android:layout_marginTop="2dp"
                 android:background="@color/black" />
             <RelativeLayout
@@ -614,7 +586,7 @@
                     android:layout_height="wrap_content"
                     android:padding="20sp"
                     android:fontFamily="@font/arima_madurai_medium"
-                    android:text="LYING TWIST STRETCH LEFT"
+                    android:text="@string/lying_twist_stretch_left"
                     android:textSize="15sp"
                     android:textColor="@color/dark_blue"/>
 
@@ -623,7 +595,7 @@
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/arima_madurai_medium"
                     android:padding="20sp"
-                    android:text="30 Seconds "
+                    android:text="@string/x_30"
                     android:textColor="@color/dark_blue"
                     android:textSize="15sp"
                     android:layout_alignParentBottom="true"/>
@@ -632,7 +604,7 @@
                     android:layout_width="200dp"
                     android:layout_height="150dp"
                     android:src="@drawable/lying_twist_stretch_left"
-                    android:layout_alignParentRight="true"/>
+                    android:layout_alignParentEnd="true"/>
             </RelativeLayout>
 
         </LinearLayout>
@@ -642,10 +614,25 @@
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_margin="10dp"
-        android:text="START"
-        android:padding="10dp"
+        android:text="START Exercise"
+        android:textSize="20sp"
         android:layout_alignParentBottom="true"
         android:background="@drawable/girls_round_corner"/>
+    </RelativeLayout>
+    <com.google.android.gms.ads.AdView
+        android:id="@+id/adView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="605dp"
+        app:adSize="FULL_BANNER"
+        app:adUnitId="ca-app-pub-2342822035961981/5574761661">
+        <!--           ca-app-pub-2342822035961981/5574761661-->
+    </com.google.android.gms.ads.AdView>
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/absFrameLayout">
+    </FrameLayout>
 
 
 </RelativeLayout>

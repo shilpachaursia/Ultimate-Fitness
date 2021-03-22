@@ -4,10 +4,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".female.exerciseFemale.ThighWorkout">
+    tools:context="com.example.ultimatefitness.female.exerciseFemale.ThighWorkout">
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="52dp">
+        android:layout_height="52dp"
+        android:id="@+id/thighToolbar"
+        android:background="#F1948A">
 
         <ImageView
             android:id="@+id/thigh_bact_btn"
@@ -33,11 +35,15 @@
            android:layout_alignParentRight="true"/>
 
     </RelativeLayout>
-
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/frameChanger">
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="55dp">
+        android:layout_marginTop="51dp"
+        android:layout_marginBottom="59dp">
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -45,9 +51,8 @@
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="150dp"
-                android:layout_marginTop="5dp"
                 android:layout_marginBottom="10dp"
-                android:background="@drawable/girls_round_corner">
+                android:background="@drawable/girls_banner_color">
 
                 <TextView
                     android:id="@+id/ex_text"
@@ -55,7 +60,16 @@
                     android:layout_height="wrap_content"
                     android:padding="20sp"
                     android:fontFamily="@font/arima_madurai_medium"
-                    android:text="THIGH WORKOUT "
+                    android:text="Follow these exercises"
+                    android:textSize="25sp"
+                    android:textColor="@color/dark_blue"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="20sp"
+                    android:fontFamily="@font/arima_madurai_medium"
+                    android:text="for next One Month "
+                    android:layout_marginTop="28sp"
                     android:textSize="25sp"
                     android:textColor="@color/dark_blue"/>
 
@@ -73,7 +87,7 @@
                     android:id="@+id/ex_img"
                     android:layout_width="200dp"
                     android:layout_height="150dp"
-                    android:src="@drawable/girlspashbg"
+                    android:src="@drawable/thighgirlbg"
                     android:layout_alignParentRight="true"/>
 
             </RelativeLayout>
@@ -87,7 +101,7 @@
                     android:padding="20sp"
                     android:fontFamily="@font/arima_madurai_medium"
                     android:text="HIGH STEPPING "
-                    android:textSize="25sp"
+                    android:textSize="20sp"
                     android:textColor="@color/dark_blue"/>
 
                 <TextView
@@ -123,7 +137,7 @@
                     android:padding="20sp"
                     android:fontFamily="@font/arima_madurai_medium"
                     android:text="JUMPING JACKS"
-                    android:textSize="25sp"
+                    android:textSize="20sp"
                     android:textColor="@color/dark_blue"/>
 
                 <TextView
@@ -158,7 +172,7 @@
                     android:padding="20sp"
                     android:fontFamily="@font/arima_madurai_medium"
                     android:text="SQUATS "
-                    android:textSize="25sp"
+                    android:textSize="20sp"
                     android:textColor="@color/dark_blue"/>
 
                 <TextView
@@ -193,7 +207,7 @@
                     android:padding="20sp"
                     android:fontFamily="@font/arima_madurai_medium"
                     android:text="DONKEY KICK"
-                    android:textSize="25sp"
+                    android:textSize="20sp"
                     android:textColor="@color/dark_blue"/>
 
                 <TextView
@@ -228,7 +242,7 @@
                     android:padding="20sp"
                     android:fontFamily="@font/arima_madurai_medium"
                     android:text="BACKWARD LUNGE"
-                    android:textSize="25sp"
+                    android:textSize="20sp"
                     android:textColor="@color/dark_blue"/>
 
                 <TextView
@@ -263,7 +277,7 @@
                     android:padding="20sp"
                     android:fontFamily="@font/arima_madurai_medium"
                     android:text="TOP LYING LEG LIFT"
-                    android:textSize="25sp"
+                    android:textSize="20sp"
                     android:textColor="@color/dark_blue"/>
 
                 <TextView
@@ -298,7 +312,7 @@
                     android:padding="20sp"
                     android:fontFamily="@font/arima_madurai_medium"
                     android:text="MODIFIED BURPEES"
-                    android:textSize="25sp"
+                    android:textSize="20sp"
                     android:textColor="@color/dark_blue"/>
 
                 <TextView
@@ -333,7 +347,7 @@
                     android:padding="20sp"
                     android:fontFamily="@font/arima_madurai_medium"
                     android:text="SQUATS "
-                    android:textSize="25sp"
+                    android:textSize="20sp"
                     android:textColor="@color/dark_blue"/>
 
                 <TextView
@@ -368,7 +382,7 @@
                     android:padding="20sp"
                     android:fontFamily="@font/arima_madurai_medium"
                     android:text="KNEE HUG "
-                    android:textSize="25sp"
+                    android:textSize="20sp"
                     android:textColor="@color/dark_blue"/>
 
                 <TextView
@@ -403,7 +417,7 @@
                     android:padding="20sp"
                     android:fontFamily="@font/arima_madurai_medium"
                     android:text="SPIDERMEN PLANK "
-                    android:textSize="25sp"
+                    android:textSize="20sp"
                     android:textColor="@color/dark_blue"/>
 
                 <TextView
@@ -438,7 +452,7 @@
                     android:padding="20sp"
                     android:fontFamily="@font/arima_madurai_medium"
                     android:text="V-SHIT "
-                    android:textSize="25sp"
+                    android:textSize="20sp"
                     android:textColor="@color/dark_blue"/>
 
                 <TextView
@@ -467,6 +481,32 @@
 
         </LinearLayout>
     </ScrollView>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/girls_round_corner"
+        android:text="@string/start_exercise"
+        android:textSize="20sp"
+        android:layout_margin="10dp"
+        android:id="@+id/thighStartBtn"
+        android:onClick="ExerciseStartMethod"/>
+</RelativeLayout>
+    <com.google.android.gms.ads.AdView
+        android:id="@+id/adView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="615dp"
+        app:adSize="FULL_BANNER"
+        app:adUnitId="ca-app-pub-2342822035961981/5574761661">
+        <!--           ca-app-pub-2342822035961981/5574761661-->
+    </com.google.android.gms.ads.AdView>
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="55dp"
+        android:id="@+id/frameContainerThighExercise"/>
 
 
 </RelativeLayout>

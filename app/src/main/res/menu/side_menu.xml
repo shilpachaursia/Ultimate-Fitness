@@ -2,25 +2,11 @@
 <menu xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <item
-        android:id="@+id/side_setting"
-        android:title="Setting"
-        android:icon="@drawable/setting"
-        app:showAsAction="ifRoom"/>
-    <item android:title="Share"
-        android:id="@+id/side_share"
-        android:icon="@drawable/share"
-        app:showAsAction="ifRoom"/>
-    <item android:title="Rate Us"
-        android:id="@+id/side_rate"
-        android:icon="@drawable/rate"
-        app:showAsAction="ifRoom"/>
-    <item android:title="Feedback"
-        android:id="@+id/side_feedback"
-        android:icon="@drawable/feedback"
-        app:showAsAction="ifRoom"/>
-    <item android:title="Privacy"
-        android:id="@+id/side_privacy"
-        android:icon="@drawable/privacy"
-        app:showAsAction="ifRoom"/>
+
+    <item android:title="Edit Name"
+        android:id="@+id/editName" />
+    <item android:title="Edit Sub Info"
+        android:id="@+id/editSubInfo"/>
+    <item android:title="Logout"
+        android:id="@+id/logout"/>
 </menu>

@@ -1,7 +1,5 @@
 package com.example.ultimatefitness;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
@@ -10,6 +8,8 @@ import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 public class SplashActivity extends AppCompatActivity {
 
@@ -24,7 +24,7 @@ public class SplashActivity extends AppCompatActivity {
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_splash);
 
-        img= (ImageView)findViewById(R.id.imageview);
+        img= (ImageView)findViewById(R.id.ImageView);
         t1= (TextView) findViewById(R.id.textview);
         t2= (TextView) findViewById(R.id.textview2);
 
@@ -33,7 +33,7 @@ public class SplashActivity extends AppCompatActivity {
         img.setAnimation(logo);
         t1.setAnimation(text);
 
-        int splashScreen = 5000;
+        int splashScreen = 3000;
         Handler handler= new Handler();
         handler.postDelayed(new Runnable() {
             @Override

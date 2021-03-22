@@ -1,6 +1,5 @@
 package com.example.ultimatefitness.bottom_menu;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -12,6 +11,7 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
 import com.example.ultimatefitness.R;
+
 
 public class WeightGainFragment extends Fragment {
     ImageView backbtn;

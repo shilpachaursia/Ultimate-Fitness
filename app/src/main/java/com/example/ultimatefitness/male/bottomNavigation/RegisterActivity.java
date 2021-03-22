@@ -1,122 +1,98 @@
 package com.example.ultimatefitness.male.bottomNavigation;
 
+import android.content.Intent;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.Toast;
+
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.content.Intent;
-import android.content.SharedPreferences;
-import android.media.session.MediaSessionManager;
-import android.os.Bundle;
-import android.util.Patterns;
-import android.view.View;
-import android.widget.Button;
-import android.widget.CheckBox;
-import android.widget.EditText;
-import android.widget.ProgressBar;
-import android.widget.RadioButton;
-import android.widget.TextView;
-import android.widget.Toast;
-
 import com.example.ultimatefitness.R;
 import com.google.android.gms.tasks.OnCompleteListener;
-import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.Task;
-import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.database.DatabaseReference;
-import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.auth.UserProfileChangeRequest;
 
-import java.util.HashMap;
-import java.util.regex.Pattern;
+import java.util.Objects;
 
 public class RegisterActivity extends AppCompatActivity {
-
-    private EditText mname;
-    private EditText memail;
-    private EditText mpass;
-    private RadioButton male,female;
-    ProgressBar progressBar;
-    public String gender="";
-
-    private FirebaseAuth mAuth;
-    FirebaseDatabase firebaseDatabase;
-    private DatabaseReference dbref;
-    BottomNavigationView bottomNavigationView;
-
+        private EditText regName,regPass,regEmail;
+        private Button login,register;
+        private  String name, email,password;
+        private FirebaseAuth auth;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
 
-        mAuth = FirebaseAuth.getInstance();
-        DatabaseReference reference = FirebaseDatabase.getInstance().getReference("user");
+        regName=findViewById(R.id.registerName);
+        regEmail=findViewById(R.id.regEmail);
+        regPass=findViewById(R.id.regPassword);
+        login=findViewById(R.id.Loginbtn);
+        register=findViewById(R.id.RegisterBtn);
+        auth=FirebaseAuth.getInstance();
 
-
-        mname = findViewById(R.id.registerName);
-        memail = (EditText) findViewById(R.id.loginEmail);
-        mpass = (EditText) findViewById(R.id.LoginPassword);
-        EditText mconfirmPassword = (EditText) findViewById(R.id.RegisterConformPassword);
-        TextView mtextView = (TextView) findViewById(R.id.alreadyRegister);
-        male= findViewById(R.id.male);
-        female= findViewById(R.id.female);
-        progressBar = findViewById(R.id.processbar);
-        Button regButton =(Button) findViewById(R.id.Loginbtn);
-
-        mtextView.setOnClickListener(new View.OnClickListener() {
+        login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(RegisterActivity.this,LoginActivity.class));
-
+                finish();
             }
         });
-
-        regButton.setOnClickListener(new View.OnClickListener() {
+        register.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {createUser();}
-        });
-
-    }
-
-    private void createUser() {
-
-        String name = mname.getText().toString();
-        String email = memail.getText().toString();
-        String password = mpass.getText().toString();
-        String confirmPassword = mpass.getText().toString();
-
-        if (male.isChecked()){
-            gender="Male";
-        }
-        if (female.isChecked()){
-            gender="Female";
-        }
-
-        if (!email.isEmpty() && Patterns.EMAIL_ADDRESS.matcher(email).matches()){
-            if (!password.isEmpty() && password.equals(confirmPassword)){
-                mAuth.createUserWithEmailAndPassword(email, password)
-                        .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
-                            @Override
-                            public void onComplete(@NonNull Task<AuthResult> task) {
-                                Toast.makeText(RegisterActivity.this, "Registered", Toast.LENGTH_SHORT).show();
-                                startActivity(new Intent(RegisterActivity.this,LoginActivity.class));
-                                finish();
-                            }
-                        }).addOnFailureListener(new OnFailureListener() {
-                    @Override
-                    public void onFailure(@NonNull Exception e) {
-                        Toast.makeText(RegisterActivity.this, "Registration error", Toast.LENGTH_SHORT).show();
-                    }
-                });
-            }else {
-                mpass.setError("Empty Fields are not allowed");
+            public void onClick(View v) {
+                validateUser();
             }
-        }else if (email.isEmpty()){
-            memail.setError("Empty Fields are not allowed");
-        }
-        else{
-            memail.setError("Please enter correct email");
+        });
+    }
+    private void validateUser() {
+        name=regName.getText().toString();
+        email=regEmail.getText().toString();
+        password=regPass.getText().toString();
+        if (name.isEmpty()||email.isEmpty()||password.isEmpty()){
+            Toast.makeText(this, "Please fill all the fields", Toast.LENGTH_SHORT).show();
+        }else {
+            registeruser();
         }
     }
 
+    private void registeruser() {
+        auth.createUserWithEmailAndPassword(email,password).addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
+            @Override
+            public void onComplete(@NonNull Task<AuthResult> task) {
+                if (task.isSuccessful()){
+                    Toast.makeText(RegisterActivity.this, "User Created", Toast.LENGTH_SHORT).show();
+                        updateUser();
+                }else {
+                    Toast.makeText(RegisterActivity.this, "Error! User is not created"+ Objects.requireNonNull(task.getException()).getMessage(), Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
+    }
+
+    private void updateUser() {
+        UserProfileChangeRequest changeRequest = new UserProfileChangeRequest.Builder().setDisplayName(name)
+                .build();
+        Objects.requireNonNull(auth.getCurrentUser()).updateProfile(changeRequest);
+        openLogin();
+    }
+
+    private void openLogin() {
+        startActivity(new Intent(RegisterActivity.this,LoginActivity.class));
+        finish();
+    }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+        if (auth.getCurrentUser() != null){
+            startActivity(new Intent(this,LoginActivity.class));
+            finish();
+        }
+    }
 }

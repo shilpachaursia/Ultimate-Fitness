@@ -27,37 +27,16 @@
             android:text="Workout"
             android:textStyle="bold"
             android:textSize="20sp"
+            android:textColor="@color/black"
             android:layout_marginLeft="50dp"
             android:layout_marginTop="4dp"
             android:layout_marginStart="50dp" />
-
         <ImageView
-            android:id="@+id/search"
             android:layout_width="30dp"
             android:layout_height="30dp"
-            android:layout_marginLeft="300dp"
-            android:src="@drawable/search"
-            android:layout_marginTop="4dp"
-            android:layout_marginStart="300dp" />
-
-
-        <ImageView
-            android:id="@+id/heart"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:layout_marginLeft="340dp"
-            app:srcCompat="@drawable/heart"
-            android:layout_marginTop="4dp"
-            android:layout_marginStart="340dp" />
-
-        <ImageView
-            android:id="@+id/menu"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:layout_marginLeft="380dp"
-            app:srcCompat="@drawable/menu"
-            android:layout_marginTop="4dp"
-            android:layout_marginStart="380dp" />
+            android:src="@drawable/share"
+            android:layout_marginLeft="350dp"
+            android:id="@+id/shareBtn"/>
 
     </RelativeLayout>
 

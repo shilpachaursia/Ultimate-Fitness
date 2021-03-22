@@ -9,6 +9,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.ultimatefitness.R;
 
+
 public class MaleViewHolder extends RecyclerView.ViewHolder {
     ImageView MaleImage;
     TextView MaleExercise,MaleStart;

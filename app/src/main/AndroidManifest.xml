@@ -1,12 +1,54 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="com.example.ultimatefitness"
-    tools:ignore="ExtraText">
+    package="com.example.ultimatefitness">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <compatible-screens>
+
+        <!-- all small size screens -->
+        <screen
+            android:screenDensity="ldpi"
+            android:screenSize="small" />
+        <screen
+            android:screenDensity="mdpi"
+            android:screenSize="small" />
+        <screen
+            android:screenDensity="hdpi"
+            android:screenSize="small" />
+        <screen
+            android:screenDensity="xhdpi"
+            android:screenSize="small" />
+        <screen
+            android:screenDensity="xxhdpi"
+            android:screenSize="small" />
+        <screen
+            android:screenDensity="xxxhdpi"
+            android:screenSize="small" />
+        <!-- all normal size screens -->
+        <screen
+            android:screenDensity="ldpi"
+            android:screenSize="normal" />
+        <screen
+            android:screenDensity="mdpi"
+            android:screenSize="normal" />
+        <screen
+            android:screenDensity="hdpi"
+            android:screenSize="normal" />
+        <screen
+            android:screenDensity="xhdpi"
+            android:screenSize="normal" />
+        <screen
+            android:screenDensity="xxhdpi"
+            android:screenSize="normal" />
+        <screen
+            android:screenDensity="xxxhdpi"
+            android:screenSize="normal" />
+    </compatible-screens>
 
     <application
         android:icon="@drawable/splashcircle"
@@ -14,49 +56,31 @@
         android:roundIcon="@drawable/splashcircle"
         android:supportsRtl="true"
         android:theme="@style/Theme.UltimateFitness">
-        <activity android:name=".female.exerciseFemale.ArmsAllExercise.ArmsCrossJumpingJacks"></activity>
-        <activity android:name=".female.exerciseFemale.ArmsAllExercise.StandingBicepsStretchRight" />
-        <activity android:name=".female.exerciseFemale.ArmsAllExercise.StandingBicepsStretchLeft" />
-        <activity android:name=".female.exerciseFemale.ArmsAllExercise.TricepsStretchRight" />
-        <activity android:name=".female.exerciseFemale.ArmsAllExercise.TricpesStretchLeft" />
-        <activity android:name=".female.exerciseFemale.ArmsAllExercise.BigsArmCircle" />
-        <activity android:name=".female.exerciseFemale.ArmsAllExercise.ArmScissors" />
-        <activity android:name=".female.exerciseFemale.ArmsAllExercise.UpDownPlank" />
-        <activity android:name=".female.exerciseFemale.ArmsAllExercise.AlternativeHooks" />
-        <activity android:name=".female.exerciseFemale.ArmsAllExercise.KneePushUps" />
-        <activity android:name=".female.exerciseFemale.ArmsAllExercise.ArmsCircle" />
-        <activity android:name=".female.exerciseFemale.ArmsAllExercise.PushUps" />
-        <activity android:name=".female.exerciseFemale.ArmsAllExercise.TricepsDips" />
-        <activity android:name=".female.exerciseFemale.ArmsAllExercise.Punches" />
-        <activity android:name=".female.exerciseFemale.ArmsAllExercise.DyanamicChest" />
-        <activity android:name=".female.exerciseFemale.exerciseStartActivity.absAllExercise.CrossJumpingJack" />
-        <activity android:name=".female.exerciseFemale.exerciseStartActivity.absAllExercise.LyingTwistStretchLeft" />
-        <activity android:name=".female.exerciseFemale.exerciseStartActivity.absAllExercise.CobraStretch" />
-        <activity android:name=".female.exerciseFemale.exerciseStartActivity.absAllExercise.Plank" />
-        <activity android:name=".female.exerciseFemale.exerciseStartActivity.absAllExercise.Skipping" />
-        <activity android:name=".female.exerciseFemale.exerciseStartActivity.absAllExercise.ButtBridge" />
-        <activity android:name=".female.exerciseFemale.exerciseStartActivity.absAllExercise.LegsArise" />
-        <activity android:name=".female.exerciseFemale.exerciseStartActivity.absAllExercise.FlutterKicks" />
-        <activity android:name=".female.exerciseFemale.exerciseStartActivity.absAllExercise.MountainClimber" />
-        <activity android:name=".female.exerciseFemale.exerciseStartActivity.absAllExercise.RussianTwist" />
-        <activity android:name=".female.exerciseFemale.exerciseStartActivity.absAllExercise.StandingBycycleCrunches" />
-        <activity android:name=".female.exerciseFemale.exerciseStartActivity.absAllExercise.HighStepping" />
-        <activity android:name=".male.exercises.ForearmMaleWorkout" />
-        <activity android:name=".male.exercises.CardioMaleWorkout" />
+        <activity android:name=".male.bottomNavigation.EditNameActivity" />
+        <activity android:name=".male.bottomNavigation.ForgetPasswordActivity" />
+        <activity android:name=".male.drawerMenuActivity.TermAndConditionActivity" />
+        <activity android:name=".male.drawerMenuActivity.FeedbackActivity" />
+        <activity android:name=".male.drawerMenuActivity.PrivacyActivity" />
+        <activity android:name=".male.drawerMenuActivity.SettingActivity" />
         <activity android:name=".male.exercises.AbsMalwWorkout" />
+        <activity android:name=".male.exercises.CardioMaleWorkout" />
         <activity android:name=".male.exercises.LegsMaleWorkout" />
         <activity android:name=".male.exercises.ShoulderMaleWorkout" />
         <activity android:name=".male.exercises.TricepsMaleWokout" />
         <activity android:name=".male.exercises.BicepsMaleWorkout" />
-        <activity android:name=".male.exercises.ChestMaleWorkout" />
         <activity android:name=".male.exercises.BackMaleWorkout" />
+        <activity android:name=".male.exercises.ChestMaleWorkout" />
+        <activity android:name=".male.exercises.FullbodyMenExercise" />
+
+        <meta-data
+            android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="ca-app-pub-2342822035961981~6396888741" />
+
         <activity android:name=".female.exerciseFemale.ThighWorkout" />
         <activity android:name=".female.exerciseFemale.ArmsWorkout" />
         <activity android:name=".female.exerciseFemale.ButtWorkout" />
         <activity android:name=".female.exerciseFemale.AbsWorkout" />
         <activity android:name=".female.exerciseFemale.FullBodyGirlWorkout" />
-        <activity android:name=".male.exercises.FullbodyMenExercise" />
-        <activity android:name=".male.bottomNavigation.EditProfilePhoto" />
         <activity android:name=".male.bottomNavigation.LoginActivity" />
         <activity android:name=".male.bottomNavigation.ProfileActivity" />
         <activity android:name=".male.bottomNavigation.RegisterActivity" />
@@ -87,6 +111,12 @@
         <meta-data
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_icon"
+            android:resource="@drawable/splashcircle" />
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_color"
+            android:resource="@color/black" />
     </application>
 
 </manifest>

@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".calculators.FatCalculator">
+    tools:context="com.example.ultimatefitness.calculators.FatCalculator">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -17,7 +17,7 @@
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
             android:padding="15dp"
-            app:srcCompat="@drawable/back_btn" />
+            android:src="@drawable/back_btn" />
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -30,13 +30,36 @@
 
 
     </RelativeLayout>
-    <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:id="@+id/bottom_navigation_view"
+    <androidx.cardview.widget.CardView
+        android:id="@+id/fatCardView"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="55dp"
+        android:layout_marginLeft="120dp"
+        app:cardBackgroundColor="@color/cardview_color"
+        app:cardCornerRadius="50dp">
+        <ImageView
+            android:id="@+id/fat_cal"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_margin="30dp"
+            app:srcCompat="@drawable/fatcal" />
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="110dp"
+            android:gravity="center"
+            android:text="Fat Calculator"
+            android:textStyle="bold" />
+    </androidx.cardview.widget.CardView>
+    <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@drawable/round_corner"
-        app:itemIconTint="@drawable/icon_color"
-        app:itemTextColor="@drawable/icon_color"
-        app:menu="@menu/bottom_menu"
-        android:layout_alignParentBottom="true"/>
+        android:layout_below="@id/fatCardView"
+        android:layout_marginTop="50dp"
+        android:text="You can estimate your body composition with our body fat percentage calculator. Remember that no calculator, however complicated, can replace a visit in a doctor's office. You should treat this result as a rough estimate; it can only tell you if your body fat percentage is drastically too high, but there's no reason to panic if the result differ slightly from the recommended value."
+        android:textSize="25sp"
+        android:textColor="@color/setting_text"
+        android:gravity="center"/>
 </RelativeLayout>

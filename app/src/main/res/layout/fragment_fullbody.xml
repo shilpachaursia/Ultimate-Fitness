@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".female.exerciseFemale.exerciseStartActivity.absAllExercise.CrossJumpingJack">
+    tools:context="com.example.ultimatefitness.female.exerciseFemale.exerciseStartActivity.absAllExercise.CrossJumpingJack">
     <LinearLayout
     android:layout_width="match_parent"
     android:layout_height="50dp"
@@ -122,5 +122,15 @@
             android:textColor="@color/black"
             android:textSize="20dp" />
     </LinearLayout>
+    <com.google.android.gms.ads.AdView
+        android:id="@+id/adView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/addArea"
+        android:layout_centerHorizontal="true"
+        app:adSize="FULL_BANNER"
+        app:adUnitId="ca-app-pub-2342822035961981/5574761661">
+        <!--           ca-app-pub-2342822035961981/5574761661-->
+    </com.google.android.gms.ads.AdView>
 
 </LinearLayout>

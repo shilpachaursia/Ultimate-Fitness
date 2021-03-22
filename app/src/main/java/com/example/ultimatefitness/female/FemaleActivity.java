@@ -1,24 +1,23 @@
 package com.example.ultimatefitness.female;
+
+import android.content.Intent;
+import android.content.SharedPreferences;
+import android.graphics.Color;
+import android.os.Bundle;
+import android.view.MenuItem;
+import android.view.View;
+import android.widget.ImageView;
+import android.widget.RelativeLayout;
+import android.widget.Toast;
+
 import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.SwitchCompat;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-import android.content.Intent;
-import android.graphics.Color;
-import android.os.Bundle;
-import android.os.PersistableBundle;
-import android.view.Menu;
-import android.view.MenuItem;
-import android.view.View;
-import android.widget.Adapter;
-import android.widget.ArrayAdapter;
-import android.widget.ImageView;
-import android.widget.RelativeLayout;
-import android.widget.SearchView;
-import android.widget.Toast;
+
 import com.example.ultimatefitness.Model;
 import com.example.ultimatefitness.R;
 import com.example.ultimatefitness.bottom_menu.PlanActivity;
@@ -28,109 +27,127 @@ import com.example.ultimatefitness.male.MaleActivity;
 import com.example.ultimatefitness.male.bottomNavigation.LoginActivity;
 import com.example.ultimatefitness.male.bottomNavigation.ProfileActivity;
 import com.example.ultimatefitness.male.bottomNavigation.RegisterActivity;
+import com.example.ultimatefitness.male.drawerMenuActivity.FeedbackActivity;
+import com.example.ultimatefitness.male.drawerMenuActivity.PrivacyActivity;
+import com.example.ultimatefitness.male.drawerMenuActivity.SettingActivity;
 import com.example.ultimatefitness.myAdapterClass;
+import com.google.android.gms.ads.AdListener;
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
+import com.google.android.gms.ads.LoadAdError;
+import com.google.android.gms.ads.MobileAds;
+import com.google.android.gms.ads.initialization.InitializationStatus;
+import com.google.android.gms.ads.initialization.OnInitializationCompleteListener;
+import com.google.android.gms.ads.interstitial.InterstitialAd;
+import com.google.android.gms.ads.interstitial.InterstitialAdLoadCallback;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationView;
+import com.google.firebase.auth.FirebaseAuth;
+
 import java.util.ArrayList;
-import static com.example.ultimatefitness.R.id.button;
-import static com.example.ultimatefitness.R.id.cal_logo;
-import static com.example.ultimatefitness.R.id.login;
-import static com.example.ultimatefitness.R.id.plan;
-import static com.example.ultimatefitness.R.id.tips;
-import static com.example.ultimatefitness.R.id.utility;
-public class FemaleActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
+
+
+public class FemaleActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener{
+    private AdView mAdView;
+    private InterstitialAd mInterstitialAd;
     static final float END_SCALE=0.7f;
-    ImageView menu, search, menuside, heart;
+    ImageView menuside,sharebtn;
     BottomNavigationView bottomNavigationView;
-    //drawer layout
+    SwitchCompat gender;
     DrawerLayout drawerLayout;
     NavigationView navigationView;
     RelativeLayout contentView;
-
-   
-    @Override
-    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
-        int itemId = item.getItemId();
-        if (itemId == R.id.side_setting) ;
-        Toast.makeText(this, "setting", Toast.LENGTH_SHORT).show();
-        if (itemId == R.id.side_share)
-            Toast.makeText(this, "share", Toast.LENGTH_SHORT).show();
-        if (itemId == R.id.side_privacy) ;
-        Toast.makeText(this, "privacy", Toast.LENGTH_SHORT).show();
-        if (itemId == R.id.side_feedback) ;
-        Toast.makeText(this, "feedback", Toast.LENGTH_SHORT).show();
-        if (itemId == R.id.side_rate) ;
-        Toast.makeText(this, "rate", Toast.LENGTH_SHORT).show();
-        return super.onOptionsItemSelected(item);
-    }
+    FirebaseAuth firebaseAuth;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_female);
-        menu = (ImageView) findViewById(R.id.menu);
-        menuside = (ImageView) findViewById(R.id.menuside);
-        search = (ImageView) findViewById(R.id.search);
-        heart = (ImageView) findViewById(R.id.heart);
-        bottomNavigationView = (BottomNavigationView) findViewById(R.id.bottom_navigation_view);
-        contentView= findViewById(R.id.content);
-        //recyclerView
+        sharebtn=findViewById(R.id.shareBtn);
+        gender=findViewById(R.id.femaleswitchGender);
+        bottomNavigationView=findViewById(R.id.bottom_navigation_view);
+        drawerLayout=findViewById(R.id.drawer_layout);
+        navigationView=findViewById(R.id.navigation_view_leftSide);
+        contentView=findViewById(R.id.content);
+        menuside=findViewById(R.id.menuside);
+        mAdView=findViewById(R.id.adView);
+        firebaseAuth=FirebaseAuth.getInstance();
+
+        //Recycler View
         RecyclerView mRecyclerView = (RecyclerView) findViewById(R.id.recyclerView);
         mRecyclerView.setLayoutManager(new LinearLayoutManager(this));
         myAdapterClass adapter = new myAdapterClass(dataQueue(), getApplicationContext());
         mRecyclerView.setAdapter(adapter);
-        //drawer layout id's
-        drawerLayout = findViewById(R.id.drawer_layout);
-        navigationView = findViewById(R.id.navigation_view_leftSide);
-        navigationView.setNavigationItemSelectedListener((menuItem)->{
-            switch (menuItem.getItemId()){
-                case R.id.nav_home:
-                    startActivity(new Intent(this,FemaleActivity.class));
-                    break;
-                case R.id.nav_gender:
-                    startActivity(new Intent(this, MaleActivity.class));
-                    break;
-                case  R.id.nav_login:
-                    startActivity(new Intent(this, LoginActivity.class));
-                    break;
-                case R.id.nav_profile:
-                    startActivity(new Intent(this, ProfileActivity.class));
-                    break;
-            }
-            return false;
-        });
-        //navigation view
-        //for toogle click
+
+        sharebtn();
+        gender();
+        ad();
+        bottomNavigationView();
         navigationDrawar();
-       
-        //side menu
-        bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+        navigationView();
+    }
+
+    private void navigationView() {
+        navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-                switch (item.getItemId()) {
-                    case R.id.exercise:
-                        break;
-                    case plan:
-                        Intent intent = new Intent(FemaleActivity.this, PlanActivity.class);
-                        startActivity(intent);
-                        break;
-                    case tips:
-                        Intent intent1 = new Intent(FemaleActivity.this, TipsActivity.class);
-                        startActivity(intent1);
-                        break;
-                    case utility:
-                        Intent intent2 = new Intent(FemaleActivity.this, UtilityActivity.class);
-                        startActivity(intent2);
-                        break;
-                    case login:
-                        Intent intent3 = new Intent(FemaleActivity.this, RegisterActivity.class);
-                        startActivity(intent3);
-                        break;
+                int i=item.getItemId();
+                if (i==R.id.nav_home){
+                    drawerLayout.closeDrawer(GravityCompat.START);
                 }
-                return false;
+                else if (i==R.id.nav_gender){
+                    startActivity(new Intent(FemaleActivity.this,MaleActivity.class));
+                    drawerLayout.closeDrawer(GravityCompat.START);
+                }
+                else if (i==R.id.nav_login){
+                    startActivity(new Intent(FemaleActivity.this, LoginActivity.class));
+                    drawerLayout.closeDrawer(GravityCompat.START);
+                }
+                else if (i==R.id.nav_profile){
+                    startActivity(new Intent(FemaleActivity.this, ProfileActivity.class));
+                    drawerLayout.closeDrawer(GravityCompat.START);
+                }
+                else if (i==R.id.nav_logout){
+                    if (firebaseAuth!=null){
+                        FirebaseAuth.getInstance().signOut();
+                        startActivity(new Intent(FemaleActivity.this,LoginActivity.class));
+                        finish();
+                        Toast.makeText(FemaleActivity.this, "Logout SuccessFull", Toast.LENGTH_SHORT).show();
+                    }
+                    drawerLayout.closeDrawer(GravityCompat.START);
+                }
+                else if (i==R.id.nav_share){
+                    Intent sharingIntent = new Intent(android.content.Intent.ACTION_SEND);
+                    sharingIntent.setType("text/plain");
+                    String shareBody = "Here is the share content body";//url of playstore app
+                    sharingIntent.putExtra(android.content.Intent.EXTRA_SUBJECT, "Subject Here");
+                    sharingIntent.putExtra(android.content.Intent.EXTRA_TEXT, shareBody);
+                    startActivity(Intent.createChooser(sharingIntent, "Share via"));
+                    drawerLayout.closeDrawer(GravityCompat.START);
+                }
+                else if (i==R.id.nav_rate){
+                    startActivity(new Intent(FemaleActivity.this, FeedbackActivity.class));
+                    drawerLayout.closeDrawer(GravityCompat.START);
+                }
+                else if (i==R.id.nav_feedback){
+                    startActivity(new Intent(FemaleActivity.this, FeedbackActivity.class));
+                    drawerLayout.closeDrawer(GravityCompat.START);
+                }
+                else if (i==R.id.nav_setting){
+                    startActivity(new Intent(FemaleActivity.this, SettingActivity.class));
+                    drawerLayout.closeDrawer(GravityCompat.START);
+                }
+                else if (i==R.id.nav_privacy){
+                    startActivity(new Intent(FemaleActivity.this, PrivacyActivity.class));
+                    drawerLayout.closeDrawer(GravityCompat.START);
+                }
+                return true;
             }
         });
     }
-    //navigation
+    @Override
+    public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+        return true;
+    }
     private void navigationDrawar() {
         navigationView.bringToFront();
         navigationView.setNavigationItemSelectedListener(this);
@@ -169,11 +186,150 @@ public class FemaleActivity extends AppCompatActivity implements NavigationView.
         if (drawerLayout.isDrawerVisible(GravityCompat.START)){
             drawerLayout.closeDrawer(GravityCompat.START);
         }else
-        super.onBackPressed();
+            super.onBackPressed();
     }
-    @Override
-    public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-        return true;
+    private void bottomNavigationView() {
+        bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                switch (item.getItemId()) {
+                    case R.id.exercise:
+                        Intent exercise=new Intent(FemaleActivity.this,FemaleActivity.class);
+                        exercise.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
+                        break;
+                    case R.id.plan:
+                        Intent intent1 = new Intent(FemaleActivity.this, PlanActivity.class);
+                        intent1.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
+                        startActivity(intent1);
+                        finish();
+                        break;
+                    case R.id.tips:
+                        Intent intent2 = new Intent(FemaleActivity.this, TipsActivity.class);
+                        intent2.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
+                        startActivity(intent2);
+                        finish();
+                        break;
+                    case R.id.utility:
+                        Intent utility=new Intent(FemaleActivity.this,UtilityActivity.class);
+                        utility.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP|Intent.FLAG_ACTIVITY_NEW_TASK);
+                        startActivity(utility);
+                        finish();
+                        break;
+                    case R.id.login:
+                        Intent intent4 = new Intent(FemaleActivity.this, RegisterActivity.class);
+                        intent4.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
+                        startActivity(intent4);
+                        finish();
+                        break;
+                }
+                return false;
+            }
+        });
+    }
+    private void ad() {
+        //admob banner
+        MobileAds.initialize(this, new OnInitializationCompleteListener() {
+            @Override
+            public void onInitializationComplete(InitializationStatus initializationStatus) {
+
+            }
+        });//ca-app-pub-2342822035961981~6396888741
+        mAdView = findViewById(R.id.adView);
+        AdRequest adRequest = new AdRequest.Builder().build();
+        mAdView.loadAd(adRequest);
+        mAdView.setAdListener(new AdListener() {
+            @Override
+            public void onAdLoaded() {
+                // Code to be executed when an ad finishes loading.
+                super.onAdLoaded();
+                Toast.makeText(FemaleActivity.this, "Ad Loaded", Toast.LENGTH_SHORT).show();
+            }
+
+            @Override
+            public void onAdFailedToLoad(LoadAdError adError) {
+                // Code to be executed when an ad request fails.
+                super.onAdFailedToLoad(adError);
+                mAdView.loadAd(adRequest);
+            }
+
+            @Override
+            public void onAdOpened() {
+                // Code to be executed when an ad opens an overlay that
+                // covers the screen.
+                super.onAdOpened();
+            }
+
+            @Override
+            public void onAdClicked() {
+                // Code to be executed when the user clicks on an ad.
+                super.onAdOpened();
+            }
+
+            @Override
+            public void onAdLeftApplication() {
+                // Code to be executed when the user has left the app.
+            }
+
+            @Override
+            public void onAdClosed() {
+                // Code to be executed when the user is about to return
+                // to the app after tapping on an ad.
+            }
+        });
+        //video Ad
+        InterstitialAd.load(this,"ca-app-pub-2342822035961981/5833797875",adRequest,new InterstitialAdLoadCallback(){
+            @Override
+            public void onAdLoaded(@NonNull InterstitialAd interstitialAd) {
+                super.onAdLoaded(interstitialAd);
+                mInterstitialAd=interstitialAd;
+            }
+
+            @Override
+            public void onAdFailedToLoad(@NonNull LoadAdError loadAdError) {
+                super.onAdFailedToLoad(loadAdError);
+                mInterstitialAd=null;
+            }
+        });
+    }
+    private void gender() {
+       gender.setOnClickListener(new View.OnClickListener() {
+           @Override
+           public void onClick(View v) {
+               SharedPreferences sharedPreferences=getSharedPreferences("save",MODE_PRIVATE);
+               gender.setChecked(sharedPreferences.getBoolean("value",true));
+               gender.setOnClickListener(new View.OnClickListener() {
+                   @Override
+                   public void onClick(View v) {
+                       if (gender.isChecked()){
+                           SharedPreferences.Editor e=getSharedPreferences("save",MODE_PRIVATE).edit();
+                           e.putBoolean("value",true);
+                           e.apply();
+                           gender.setChecked(true);
+                           startActivity(new Intent(FemaleActivity.this,MaleActivity.class));
+                       }else{
+                           SharedPreferences.Editor editor=getSharedPreferences("save",MODE_PRIVATE).edit();
+                           editor.putBoolean("value",false);
+                           editor.apply();
+                           gender.setChecked(false);
+
+                       }
+                   }
+               });
+           }
+       });
+    }
+    private void sharebtn() {
+       sharebtn.setOnClickListener(new View.OnClickListener() {
+           @Override
+           public void onClick(View v) {
+               Intent shareIntent= new Intent(android.content.Intent.ACTION_SEND);
+               shareIntent.setType("Text/Plain");
+               String shareBody="share the Uri of playstore";//uri playstore
+               shareIntent.putExtra(android.content.Intent.EXTRA_SUBJECT, "Subject Here");
+               shareIntent.putExtra(android.content.Intent.EXTRA_TEXT, shareBody);
+               startActivity(Intent.createChooser(shareIntent, "Share via"));
+           }
+       });
     }
     public ArrayList<Model> dataQueue() {
         ArrayList<Model> holder = new ArrayList<>();
@@ -204,5 +360,4 @@ public class FemaleActivity extends AppCompatActivity implements NavigationView.
         holder.add(obj5);
         return holder;
     }
-
 }

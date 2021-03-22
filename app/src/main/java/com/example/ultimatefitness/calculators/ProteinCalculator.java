@@ -1,10 +1,11 @@
 package com.example.ultimatefitness.calculators;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.os.Bundle;
 
+import androidx.appcompat.app.AppCompatActivity;
+
 import com.example.ultimatefitness.R;
+
 
 public class ProteinCalculator extends AppCompatActivity {
 

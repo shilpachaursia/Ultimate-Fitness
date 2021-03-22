@@ -5,11 +5,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context="com.example.ultimatefitness.MainActivity">
 
     <TextView
         android:id="@+id/gender"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="5dp"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:text="CHOOSE YOUR GENDER"
@@ -24,29 +24,29 @@
         android:layout_height="200dp"
         android:layout_below="@id/gender"
         android:layout_marginLeft="100dp"
-        android:layout_marginTop="-1dp"
-        app:srcCompat="@drawable/boy" />
+        android:layout_marginTop="57dp"
+        app:srcCompat="@drawable/malebg" />
 
     <TextView
+        android:id="@+id/boytext"
         android:layout_width="100dp"
         android:layout_height="50dp"
+        android:layout_below="@id/boy"
+        android:layout_marginLeft="150dp"
+        android:layout_marginTop="10dp"
         android:text="MALE"
-        android:textStyle="bold"
         android:textColor="@color/black"
         android:textSize="24dp"
-       android:layout_below="@id/boy"
-        android:layout_marginLeft="150dp"
-        android:id="@+id/boytext"
-        android:layout_marginTop="20dp"/>
+        android:textStyle="bold" />
 
     <ImageView
         android:id="@+id/girl"
-        android:layout_width="221dp"
+        android:layout_width="201dp"
         android:layout_height="233dp"
         android:layout_below="@id/boytext"
         android:layout_marginLeft="100dp"
-        android:layout_marginTop="0dp"
-        app:srcCompat="@drawable/girl" />
+        android:layout_marginTop="-10dp"
+        app:srcCompat="@drawable/femalebg" />
 
     <TextView
         android:id="@+id/girltext"
@@ -54,22 +54,12 @@
         android:layout_height="50dp"
         android:layout_below="@id/girl"
         android:layout_marginLeft="150dp"
-        android:layout_marginTop="3dp"
+        android:layout_marginTop="9dp"
         android:text="FEMALE"
         android:textColor="@color/black"
         android:textSize="24dp"
         android:textStyle="bold" />
 
-    <TextView
-        android:id="@+id/title"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:layout_alignParentBottom="true"
-        android:text="ULITIMATE FITNESS"
-        android:textColor="@color/black"
-        android:gravity="center"
-        android:textSize="14sp"
-        android:textStyle="bold" />
 
 
 </RelativeLayout>

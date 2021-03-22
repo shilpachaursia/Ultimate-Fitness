@@ -1,4 +1,4 @@
-package com.example.ultimatefitness;
+package com.UltimateFitness.ultimatefitness;
 
 import android.content.Context;
 
@@ -16,11 +16,11 @@ import static org.junit.Assert.*;
  * @see <a href="http://d.android.com/tools/testing">Testing documentation</a>
  */
 @RunWith(AndroidJUnit4.class)
-public class ExampleInstrumentedTest {
+classexampleInstrumentedTest {
     @Test
     public void useAppContext() {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getInstrumentation().getTargetContext();
-        assertEquals("com.example.ultimatefitness", appContext.getPackageName());
+        assertEquals("com.UltimateFitness.ultimatefitness", appContext.getPackageName());
     }
 }

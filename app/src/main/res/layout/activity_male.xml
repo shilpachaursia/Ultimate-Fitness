@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".male.MaleActivity"
+    tools:context="com.example.ultimatefitness.male.MaleActivity"
     android:id="@+id/drawer_layout1">
 
     <RelativeLayout
@@ -18,6 +18,24 @@
             android:layout_marginTop="55dp"
             android:layout_marginBottom="55dp"
             android:id="@+id/menRecycleView"/>
+        <androidx.appcompat.widget.SwitchCompat
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/switchGender"
+            android:text="Male"
+            android:textSize="15dp"
+            android:layout_marginLeft="250dp"/>
+        <com.google.android.gms.ads.AdView
+            android:id="@+id/adView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/bottom_navigation_view"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="0dp"
+            app:adSize="FULL_BANNER"
+            app:adUnitId="ca-app-pub-2342822035961981/5574761661">
+            <!--           ca-app-pub-2342822035961981/5574761661-->
+        </com.google.android.gms.ads.AdView>
         <FrameLayout
             android:layout_marginTop="53dp"
             android:layout_width="match_parent"

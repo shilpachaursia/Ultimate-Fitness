@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".calculators.ProteinCalculator">
+    tools:context="com.example.ultimatefitness.calculators.ProteinCalculator">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -30,14 +30,37 @@
 
 
     </RelativeLayout>
-    <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:id="@+id/bottom_navigation_view"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@drawable/round_corner"
-        app:itemIconTint="@drawable/icon_color"
-        app:itemTextColor="@drawable/icon_color"
-        app:menu="@menu/bottom_menu"
-        android:layout_alignParentBottom="true"/>
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="160dp"
+        android:layout_height="160dp"
+        android:layout_marginTop="55dp"
+        android:layout_marginLeft="120dp"
+        app:cardBackgroundColor="@color/cardview_color"
+        app:cardCornerRadius="50dp">
+        <ImageView
+            android:id="@+id/protein_cal"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_margin="30dp"
+            app:srcCompat="@drawable/proteincal" />
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="110dp"
+            android:gravity="center"
+            android:text="Protein Calculator"
+            android:textStyle="bold" />
+    </androidx.cardview.widget.CardView>
+  <TextView
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:text="The commonly recommended range of protein for both men and women is roughly 0.8 to 1.0 grams per pound of weight (in kilograms) or 0.36 to 0.45 grams per pound of body weight. However, this is the minimum amount most people need, and the optimum intake can vary widely from one individual to the next depending on certain factors."
+      android:layout_marginTop="55dp"
+      android:textSize="25sp"
+      android:layout_below="@id/cardView"
+      android:gravity="center"
+      android:textColor="@color/setting_text" />
 
 </RelativeLayout>

@@ -4,8 +4,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".SplashActivity"
-    android:background="#273746 ">
+    tools:context="com.example.ultimatefitness.SplashActivity"
+    android:background="@color/dark_blue">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_marginTop="90dp"
+        android:src="@drawable/splashcircle"
+        android:id="@+id/ImageView"/>
 
     <TextView
         android:id="@+id/textview"
@@ -15,21 +22,13 @@
         android:layout_marginLeft="20dp"
         android:layout_marginTop="200dp"
         android:layout_marginRight="20dp"
-        android:layout_marginBottom="92dp"
         android:fontFamily="@font/bungee_inline"
         android:gravity="center"
         android:text="All progress takes place outside the comfort zone."
         android:textColor="@color/white"
         android:textSize="20sp" />
 
-    <ImageView
-        android:id="@+id/imageview"
-        android:layout_width="300dp"
-        android:layout_height="300dp"
-        android:layout_marginLeft="60dp"
-        android:layout_marginRight="20dp"
-        android:layout_marginTop="50dp"
-        app:srcCompat="@drawable/splashcircle" />
+
 
     <TextView
         android:id="@+id/textview2"
@@ -37,8 +36,9 @@
         android:layout_height="50dp"
         android:text="ULTIMATE FITNESS"
         android:textColor="@color/white"
+        android:textStyle="bold"
         android:textSize="34dp"
-        android:layout_marginTop="400dp"
+        android:layout_marginTop="450dp"
         android:gravity="center_horizontal" />
 
 

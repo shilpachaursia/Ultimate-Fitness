@@ -20,8 +20,9 @@
     <color name="cardview_color">#F4C2C2</color>
     <color name="pink">#C151BB</color>
     <color name="boy_card_view">#ADD8E6</color>
-    <color name="grey">#181919</color>
+    <color name="grey">#a7a7a7</color>
     <color name="boy_cardView_color">#5DADE2</color>
+    <color name="setting_text">#5e8d6a</color>
 
 
 </resources>

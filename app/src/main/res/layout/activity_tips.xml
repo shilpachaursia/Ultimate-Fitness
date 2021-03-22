@@ -4,8 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".bottom_menu.TipsActivity"
-    android:background="@drawable/bg3"
+    tools:context="com.example.ultimatefitness.bottom_menu.TipsActivity"
     android:id="@+id/fragmentContainer">
     <RelativeLayout
         android:layout_width="match_parent"
@@ -28,17 +27,98 @@
             android:textColor="@color/black"
             android:layout_marginLeft="50dp"/>
 
-        <ImageView
-            android:id="@+id/search_btn"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentRight="true"
-            android:layout_centerVertical="true"
-            android:padding="15dp"
-            android:src="@drawable/search" />
 
     </RelativeLayout>
+    <com.google.android.gms.ads.AdView
+        android:id="@+id/adView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/bottom_navigation_view"
+        android:layout_centerHorizontal="true"
+        app:adSize="FULL_BANNER"
+        app:adUnitId="ca-app-pub-2342822035961981/5574761661">
+        <!--           ca-app-pub-2342822035961981/5574761661-->
+    </com.google.android.gms.ads.AdView>
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginTop="460dp"
+        android:layout_marginLeft="30dp"
+        app:cardCornerRadius="8dp"
+        android:id="@+id/weightgainLayout">
 
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="@color/black"
+            android:orientation="vertical"
+            android:id="@+id/layout_id">
+            <LinearLayout
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="30dp"
+                android:orientation="horizontal">
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <TextView
+                        android:id="@+id/main_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="WEIGHT GAIN"
+                        android:textColor="@color/white"
+                        android:textSize="24sp"
+                        android:textStyle="bold" />
+                    <TextView
+                        android:id="@+id/tip"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="TIPS"
+                        android:textColor="@color/white"
+                        android:textSize="25sp"
+                        android:textStyle="bold"
+                        android:layout_marginTop="20dp"/>
+                    <TextView
+                        android:id="@+id/weightLossTime"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="WEEK"
+                        android:textColor="@color/white"
+                        android:textSize="15sp"
+                        android:textStyle="bold"
+                        android:layout_marginTop="20dp"/>
+
+
+
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/weightLossImage"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:srcCompat="@drawable/weightgain" />
+
+
+                </RelativeLayout>
+
+
+            </LinearLayout>
+
+
+
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="150dp"
@@ -77,9 +157,6 @@
                         android:textColor="@color/black"
                         android:textSize="24sp"
                         android:textStyle="bold" />
-
-
-
                     <TextView
                         android:id="@+id/workout"
                         android:layout_width="wrap_content"
@@ -119,9 +196,6 @@
 
             </LinearLayout>
 
-
-
-
         </LinearLayout>
 
     </androidx.cardview.widget.CardView>
@@ -132,14 +206,14 @@
         android:layout_marginTop="60dp"
         android:layout_marginLeft="30dp"
         app:cardCornerRadius="8dp"
-        android:id="@+id/weightgainLayout">
+        android:id="@+id/weightgainLayout1">
 
         <LinearLayout
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
             android:background="@color/black"
             android:orientation="vertical"
-            android:id="@+id/layout_id">
+            android:id="@+id/layout_id1">
 
             <LinearLayout
                 android:layout_weight="1"
@@ -149,25 +223,20 @@
                 android:layout_marginTop="10dp"
                 android:layout_marginRight="30dp"
                 android:orientation="horizontal">
-
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:orientation="vertical">
-
                     <TextView
-                        android:id="@+id/main_text"
+                        android:id="@+id/main_text1"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="WEIGHT GAIN"
                         android:textColor="@color/white"
                         android:textSize="24sp"
                         android:textStyle="bold" />
-
-
-
                     <TextView
-                        android:id="@+id/tip"
+                        android:id="@+id/tip1"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="TIPS"
@@ -176,7 +245,7 @@
                         android:textStyle="bold"
                         android:layout_marginTop="20dp"/>
                     <TextView
-                        android:id="@+id/weightLossTime"
+                        android:id="@+id/weightLossTime1"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="MONTHS"
@@ -184,40 +253,19 @@
                         android:textSize="15sp"
                         android:textStyle="bold"
                         android:layout_marginTop="20dp"/>
-
-
-
                 </LinearLayout>
-
                 <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
-
                     <ImageView
-                        android:id="@+id/weightLossImage"
+                        android:id="@+id/weightLossImage1"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         app:srcCompat="@drawable/weightgain" />
-
-
                 </RelativeLayout>
-
-
             </LinearLayout>
-
-
-
-
         </LinearLayout>
-
     </androidx.cardview.widget.CardView>
-
-    <FrameLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:id="@+id/frame_container"
-        android:layout_above="@+id/bottom_navigation_view"/>
-
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottom_navigation_view"
         android:layout_width="match_parent"
@@ -228,5 +276,4 @@
         app:menu="@menu/bottom_menu"
         app:labelVisibilityMode="labeled"
         android:layout_alignParentBottom="true"/>
-
 </RelativeLayout>

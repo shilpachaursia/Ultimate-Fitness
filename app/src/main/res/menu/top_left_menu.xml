@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
-
     <group
         android:checkableBehavior="single">
         <item
@@ -10,12 +9,11 @@
 
         <item
             android:id="@+id/nav_gender"
-            android:title="Gender"
+            android:title="Switch Gender"
             android:icon="@drawable/gender"/>
 
 
     </group>
-
     <item
         android:title="Profile">
         <menu>
@@ -24,7 +22,7 @@
                 <item
                     android:id="@+id/nav_login"
                     android:title="Login"
-                    android:icon="@drawable/login"/>
+                    android:icon="@drawable/login_final"/>
 
                 <item
                     android:id="@+id/nav_profile"
@@ -39,9 +37,6 @@
 
         </menu>
     </item>
-
-
-
     <item
         android:title="Share">
         <menu>
@@ -77,9 +72,4 @@
 
         </menu>
     </item>
-
-
-
-
-
 </menu>

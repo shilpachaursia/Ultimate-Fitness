@@ -1,14 +1,403 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<RelativeLayout  xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".male.exercises.CardioMaleWorkout">
-  <TextView
-      android:layout_width="match_parent"
-      android:layout_height="match_parent"
-      android:text="cardio men"
-      android:textSize="50dp"/>
-  </androidx.constraintlayout.widget.ConstraintLayout>
+    tools:context="com.example.ultimatefitness.male.exercises.CardioMaleWorkout">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:background="#98AFC7"
+        android:id="@+id/cardioToolbar">
+
+        <ImageView
+            android:id="@+id/leg_bact_btn_b"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:padding="15dp"
+            android:src="@drawable/back_btn"
+            android:onClick="back"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/adamina"
+            android:text="Cardio Exercise"
+            android:textSize="30sp"
+            android:textColor="@color/black"
+            android:layout_marginLeft="50dp"/>
+
+        <ImageView
+            android:id="@+id/search_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:padding="15dp"
+            android:src="@drawable/search" />
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/cardioFrameChanger"
+        android:layout_marginTop="50dp">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="58dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/boy_round_corner">
+
+                <TextView
+                    android:id="@+id/ex_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/arima_madurai_medium"
+                    android:padding="10sp"
+                    android:text="Follow these exercises"
+                    android:textColor="@color/dark_blue"
+                    android:textSize="25sp" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/arima_madurai_medium"
+                    android:padding="10sp"
+                    android:layout_marginTop="25sp"
+                    android:text="for next One Month"
+                    android:textColor="@color/dark_blue"
+                    android:textSize="25sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/arima_madurai_medium"
+                    android:padding="20sp"
+                    android:text="30 MINUTES "
+                    android:textColor="@color/dark_blue"
+                    android:textSize="15sp"
+                    android:layout_alignParentBottom="true"/>
+
+                <pl.droidsonroids.gif.GifImageView
+                    android:id="@+id/ex_img"
+                    android:layout_width="200dp"
+                    android:layout_height="150dp"
+                    android:src="@drawable/cardioboybg"
+                    android:layout_alignParentRight="true"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="130dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="20sp"
+                    android:fontFamily="@font/arima_madurai_medium"
+                    android:text="Battle Rop"
+                    android:textSize="20sp"
+                    android:textColor="@color/dark_blue"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/arima_madurai_medium"
+                    android:padding="20sp"
+                    android:text="30 Seconds "
+                    android:textColor="@color/dark_blue"
+                    android:textSize="15sp"
+                    android:layout_alignParentBottom="true"/>
+
+                <pl.droidsonroids.gif.GifImageView
+                    android:layout_width="200dp"
+                    android:layout_height="150dp"
+                    android:src="@drawable/battlerope"
+                    android:layout_alignParentRight="true" />
+
+            </RelativeLayout>
+            <View
+                android:layout_width="340dp"
+                android:layout_height="2dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="2dp"
+                android:background="@color/black" />
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="130dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="20sp"
+                    android:fontFamily="@font/arima_madurai_medium"
+                    android:text="Body Weight Work"
+                    android:textSize="20sp"
+                    android:textColor="@color/dark_blue"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/arima_madurai_medium"
+                    android:padding="20sp"
+                    android:text="30 Seconds "
+                    android:textColor="@color/dark_blue"
+                    android:textSize="15sp"
+                    android:layout_alignParentBottom="true"/>
+
+                <pl.droidsonroids.gif.GifImageView
+                    android:layout_width="200dp"
+                    android:layout_height="150dp"
+                    android:src="@drawable/bodyweight_walking_lunges_for_time"
+                    android:layout_alignParentRight="true"/>
+
+            </RelativeLayout>
+            <View
+                android:layout_width="340dp"
+                android:layout_height="2dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="2dp"
+                android:background="@color/black" />
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="130dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="20sp"
+                    android:fontFamily="@font/arima_madurai_medium"
+                    android:text="Burpees"
+                    android:textSize="20sp"
+                    android:textColor="@color/dark_blue"/>
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/arima_madurai_medium"
+                    android:padding="20sp"
+                    android:text="X 12 "
+                    android:textColor="@color/dark_blue"
+                    android:textSize="15sp"
+                    android:layout_alignParentBottom="true"/>
+
+                <pl.droidsonroids.gif.GifImageView
+                    android:layout_width="200dp"
+                    android:layout_height="150dp"
+                    android:src="@drawable/burpees"
+                    android:layout_alignParentRight="true"/>
+
+            </RelativeLayout>
+            <View
+                android:layout_width="340dp"
+                android:layout_height="2dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="2dp"
+                android:background="@color/black" />
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="130dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="20sp"
+                    android:fontFamily="@font/arima_madurai_medium"
+                    android:text="High Knee Run"
+                    android:textSize="20sp"
+                    android:textColor="@color/dark_blue"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/arima_madurai_medium"
+                    android:padding="20sp"
+                    android:text="X 12 "
+                    android:textColor="@color/dark_blue"
+                    android:textSize="15sp"
+                    android:layout_alignParentBottom="true"/>
+
+                <pl.droidsonroids.gif.GifImageView
+                    android:layout_width="200dp"
+                    android:layout_height="150dp"
+                    android:src="@drawable/highkneerun"
+                    android:layout_alignParentRight="true"/>
+
+            </RelativeLayout>
+            <View
+                android:layout_width="340dp"
+                android:layout_height="2dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="2dp"
+                android:background="@color/black" />
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="130dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="20sp"
+                    android:fontFamily="@font/arima_madurai_medium"
+                    android:text="Jumping Lunge"
+                    android:textSize="20sp"
+                    android:textColor="@color/dark_blue"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/arima_madurai_medium"
+                    android:padding="20sp"
+                    android:text="X 10 "
+                    android:textColor="@color/dark_blue"
+                    android:textSize="15sp"
+                    android:layout_alignParentBottom="true"/>
+
+                <pl.droidsonroids.gif.GifImageView
+                    android:layout_width="200dp"
+                    android:layout_height="150dp"
+                    android:src="@drawable/jumping_lunges"
+                    android:layout_alignParentRight="true"/>
+
+            </RelativeLayout>
+            <View
+                android:layout_width="340dp"
+                android:layout_height="2dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="2dp"
+                android:background="@color/black" />
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="130dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="20sp"
+                    android:fontFamily="@font/arima_madurai_medium"
+                    android:text="Kettlebell Flow"
+                    android:textSize="20sp"
+                    android:textColor="@color/dark_blue"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/arima_madurai_medium"
+                    android:padding="20sp"
+                    android:text="X 8 "
+                    android:textColor="@color/dark_blue"
+                    android:textSize="15sp"
+                    android:layout_alignParentBottom="true"/>
+
+                <pl.droidsonroids.gif.GifImageView
+                    android:layout_width="200dp"
+                    android:layout_height="150dp"
+                    android:src="@drawable/kettlebell_flow"
+                    android:layout_alignParentRight="true"/>
+
+            </RelativeLayout>
+            <View
+                android:layout_width="340dp"
+                android:layout_height="2dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="2dp"
+                android:background="@color/black" />
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="130dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/arima_madurai_medium"
+                    android:padding="20sp"
+                    android:text="Medicine Ball"
+                    android:textColor="@color/dark_blue"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/arima_madurai_medium"
+                    android:padding="20sp"
+                    android:text="X 8 "
+                    android:textColor="@color/dark_blue"
+                    android:textSize="15sp"
+                    android:layout_alignParentBottom="true"/>
+
+                <pl.droidsonroids.gif.GifImageView
+                    android:layout_width="200dp"
+                    android:layout_height="150dp"
+                    android:src="@drawable/medicine_ball"
+                    android:layout_alignParentRight="true"/>
+
+
+            </RelativeLayout>
+            <View
+                android:layout_width="340dp"
+                android:layout_height="2dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="2dp"
+                android:background="@color/black" />
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="130dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/arima_madurai_medium"
+                    android:padding="20sp"
+                    android:text="Sprint"
+                    android:textColor="@color/dark_blue"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/arima_madurai_medium"
+                    android:padding="20sp"
+                    android:text="X 8 "
+                    android:textColor="@color/dark_blue"
+                    android:textSize="15sp"
+                    android:layout_alignParentBottom="true"/>
+
+                <pl.droidsonroids.gif.GifImageView
+                    android:layout_width="200dp"
+                    android:layout_height="150dp"
+                    android:src="@drawable/sprints"
+                    android:layout_alignParentRight="true"/>
+
+
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+    <Button
+        android:id="@+id/chest_startExercise"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_margin="10dp"
+        android:text="START Exericse"
+        android:padding="10dp"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/girls_round_corner"
+        android:onClick="moveFragment"/></RelativeLayout>
+    <com.google.android.gms.ads.AdView
+        android:id="@+id/adView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="605dp"
+        app:adSize="FULL_BANNER"
+        app:adUnitId="ca-app-pub-2342822035961981/5574761661">
+        <!--           ca-app-pub-2342822035961981/5574761661-->
+    </com.google.android.gms.ads.AdView>
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/cardioFrameContainer"/>
+
+</RelativeLayout  >

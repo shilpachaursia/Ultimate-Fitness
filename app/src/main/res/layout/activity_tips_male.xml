@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".male.bottomNavigation.TipsMaleActivity">
+    tools:context="com.example.ultimatefitness.male.bottomNavigation.TipsMaleActivity">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -26,15 +26,6 @@
             android:layout_marginTop="10dp"
             android:textColor="@color/black"
             android:layout_marginLeft="50dp"/>
-
-        <ImageView
-            android:id="@+id/search_btn"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentRight="true"
-            android:layout_centerVertical="true"
-            android:padding="15dp"
-            android:src="@drawable/search" />
 
     </RelativeLayout>
 
@@ -97,11 +88,7 @@
                         android:textSize="15sp"
                         android:textStyle="bold"
                         android:layout_marginTop="20dp"/>
-
-
-
                 </LinearLayout>
-
                 <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
@@ -111,16 +98,8 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         app:srcCompat="@drawable/weightloss" />
-
-
                 </RelativeLayout>
-
-
             </LinearLayout>
-
-
-
-
         </LinearLayout>
 
     </androidx.cardview.widget.CardView>
@@ -162,9 +141,6 @@
                         android:textColor="@color/white"
                         android:textSize="24sp"
                         android:textStyle="bold" />
-
-
-
                     <TextView
                         android:id="@+id/tip"
                         android:layout_width="wrap_content"
@@ -183,9 +159,6 @@
                         android:textSize="15sp"
                         android:textStyle="bold"
                         android:layout_marginTop="20dp"/>
-
-
-
                 </LinearLayout>
 
                 <RelativeLayout
@@ -198,18 +171,21 @@
                         android:layout_height="match_parent"
                         app:srcCompat="@drawable/weightgain" />
 
-
                 </RelativeLayout>
-
-
             </LinearLayout>
-
-
-
-
         </LinearLayout>
 
     </androidx.cardview.widget.CardView>
+    <com.google.android.gms.ads.AdView
+        android:id="@+id/adView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/bottom_navigation_view"
+        android:layout_centerHorizontal="true"
+        app:adSize="FULL_BANNER"
+        app:adUnitId="ca-app-pub-2342822035961981/5574761661">
+        <!--           ca-app-pub-2342822035961981/5574761661-->
+    </com.google.android.gms.ads.AdView>
     <FrameLayout
         android:id="@+id/framecontainer"
         android:layout_width="match_parent"

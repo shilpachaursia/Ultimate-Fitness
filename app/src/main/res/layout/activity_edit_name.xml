@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.ultimatefitness.male.bottomNavigation.EditNameActivity">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Edit Profile"
+        android:textSize="25sp"
+        android:textColor="@color/black"
+        android:gravity="center"
+        android:layout_margin="30dp"
+        android:id="@+id/title"/>
+    <com.rengwuxian.materialedittext.MaterialEditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/nameEdit"
+        android:hint="Your Name..."
+        android:inputType="text"
+        android:textColor="@color/setting_text"
+        android:textColorHint="@color/setting_text"
+        android:fontFamily="monospace"
+        android:layout_below="@id/title"
+        app:met_singleLineEllipsis="true"
+        app:met_baseColor="@color/setting_text"
+        app:met_floatingLabel="highlight"
+        app:met_primaryColor="@color/setting_text"/>
+    <com.rengwuxian.materialedittext.MaterialEditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/editSubInfo"
+        android:layout_below="@id/nameEdit"
+        android:hint="Your Information..."
+        android:inputType="text"
+        android:textColor="@color/setting_text"
+        android:textColorHint="@color/setting_text"
+        android:fontFamily="monospace"
+        app:met_singleLineEllipsis="true"
+        app:met_baseColor="@color/setting_text"
+        app:met_floatingLabel="highlight"
+        app:met_primaryColor="@color/setting_text"/>
+    <Button
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editSubInfo"
+        android:background="@drawable/girls_round_corner"
+       android:layout_marginTop="30sp"
+        android:text="edit changes"
+        android:textSize="20sp"
+        android:id="@+id/EditBtn"
+        android:layout_marginLeft="40dp"/>
+</RelativeLayout>

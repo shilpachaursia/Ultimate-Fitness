@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".male.bottomNavigation.PlanMaleActivity">
+    tools:context="com.example.ultimatefitness.male.bottomNavigation.PlanMaleActivity">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -28,14 +28,7 @@
                 android:textColor="@color/black"
                 android:layout_marginLeft="50dp"/>
 
-            <ImageView
-                android:id="@+id/search_btn"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentRight="true"
-                android:layout_marginRight="8dp"
-                android:padding="15dp"
-                android:src="@drawable/search" />
+
     </RelativeLayout>
 
     <ScrollView
@@ -52,8 +45,7 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:orientation="horizontal"
-                android:layout_marginLeft="10dp">
+                android:orientation="horizontal">
 
                 <LinearLayout
                     android:layout_width="0dp"
@@ -153,8 +145,7 @@
                     android:layout_width="0dp"
                     android:layout_height="200dp"
                     android:layout_marginTop="15dp"
-                    android:layout_weight="1"
-                    android:layout_marginLeft="10dp">
+                    android:layout_weight="1">
 
                     <androidx.cardview.widget.CardView
                         android:layout_width="200dp"
@@ -248,8 +239,7 @@
                     android:layout_width="0dp"
                     android:layout_height="200dp"
                     android:layout_marginTop="10dp"
-                    android:layout_weight="1"
-                    android:layout_marginStart="5dp">
+                    android:layout_weight="1">
 
                     <androidx.cardview.widget.CardView
                         android:layout_width="200dp"
@@ -346,8 +336,7 @@
                     android:layout_width="0dp"
                     android:layout_height="200dp"
                     android:layout_marginTop="10dp"
-                    android:layout_weight="1"
-                    android:layout_marginStart="5dp">
+                    android:layout_weight="1">
 
                     <androidx.cardview.widget.CardView
                         android:layout_width="200dp"
@@ -443,8 +432,7 @@
                     android:layout_width="0dp"
                     android:layout_height="200dp"
                     android:layout_marginTop="10dp"
-                    android:layout_weight="1"
-                    android:layout_marginStart="5dp">
+                    android:layout_weight="1">
 
                     <androidx.cardview.widget.CardView
                         android:layout_width="200dp"
@@ -537,7 +525,16 @@
 
 
     </ScrollView>
-
+    <com.google.android.gms.ads.AdView
+        android:id="@+id/adView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/bottom_navigation_view"
+        android:layout_centerHorizontal="true"
+        app:adSize="FULL_BANNER"
+        app:adUnitId="ca-app-pub-2342822035961981/5574761661">
+        <!--           ca-app-pub-2342822035961981/5574761661-->
+    </com.google.android.gms.ads.AdView>
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottom_navigation_view"
         android:layout_width="match_parent"
